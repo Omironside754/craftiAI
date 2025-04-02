@@ -59,7 +59,7 @@
 
         .back-to-contact-btn:hover {
             background-color: #5a5a5a;
-            /* Slightly lighter grey on hover */
+          
         }
     </style>
 </head>
@@ -67,21 +67,18 @@
 <body>
     <!-- Header from index.html -->
     <header id="header">
-        <picture>
-            <!-- Mobile Logo -->
-            <source srcset="images/LogoM.png" media="(max-width: 736px)">
-            <!-- Desktop Logo -->
-            <img src="images/LogoC.png" alt="Craftifai Logo">
-        </picture>
-
-        <!-- Hamburger Button for Mobile -->
+        <a href="index.html">
+            <picture>
+                <source srcset="images/LogoM.png" media="(max-width: 736px)">
+                <img src="images/LogoC.png" alt="Craftifai Logo">
+            </picture>
+        </a>
         <button class="hamburger" aria-label="Toggle Menu">
             <span></span>
             <span></span>
             <span></span>
         </button>
-
-        <nav class="nav-menu">
+        <nav class="nav-menu desktop-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="capabilities.html">Capabilities</a></li>
@@ -91,40 +88,96 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-
     </header>
+
+    <nav class="mobile-nav">
+        <ul class="main-menu">
+            <li><a href="index.html">Home</a></li>
+            <li class="has-submenu">
+                <a href="capabilities.html">Capabilities</a>
+                <span class="submenu-arrow">&#9660;</span>
+                <ul class="sub-menu">
+                    <li><a href="capabilities.html#edge-ai">Edge AI Solutions</a></li>
+                    <li><a href="capabilities.html#product-design">Product Design & Engineering</a></li>
+                    <li><a href="capabilities.html#embedded-system">Embedded System Design</a></li>
+                    <li><a href="capabilities.html#fpga-design">FPGA Design</a></li>
+                    <li><a href="capabilities.html#manufacturing">Manufacturing and Assembly</a></li>
+                    <li><a href="capabilities.html#inventory">Managed Inventory and Logistics</a></li>
+                    <li><a href="capabilities.html#quality-assurance">System Integration & Quality Assurance</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="industries.html">Industries</a>
+                <span class="submenu-arrow">&#9660;</span>
+                <ul class="sub-menu">
+                    <li><a href="industries.html#consumer-electronics">Consumer Electronics & IoT Devices</a></li>
+                    <li><a href="industries.html#security-surveillance">Security & Surveillance</a></li>
+                    <li><a href="industries.html#energy-utilities">Energy & Utilities</a></li>
+                    <li><a href="industries.html#industrial">Industrial</a></li>
+                    <li><a href="industries.html#robotics">Robotics</a></li>
+                    <li><a href="industries.html#aerospace-defense">Aerospace & Defense</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="index.html#two">Company</a></li>
+            <li class="has-submenu">
+                <a>Products</a>
+                <span class="submenu-arrow">&#9660;</span>
+                <ul class="sub-menu">
+                    <!-- Using hash links so that the same page content changes -->
+                    <li><a href="products.html#ipg">Intelligent Pipeline Generator</a></li>
+                    <li><a href="products.html#mlops">Intelligent Edge MLops</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
         <!-- Left Navigation Bar -->
         <nav class="sidebar">
             <ul class="nav-links">
                 <li class="nav-item active" data-topic="edge-ai">
-                    <span>Edge AI Solutions</span>
-                    <div class="pointer"></div>
+                    <a href="#edge-ai">
+                        <span>Edge AI Solutions</span>
+                        <div class="pointer"></div>
+                    </a>
                 </li>
                 <li class="nav-item" data-topic="product-design">
-                    <span>Product Design & Engineering</span>
-                    <div class="pointer"></div>
+                    <a href="#product-design">
+                        <span>Product Design & Engineering</span>
+                        <div class="pointer"></div>
+                    </a>
                 </li>
                 <li class="nav-item" data-topic="embedded-system">
-                    <span>Embedded System Design</span>
-                    <div class="pointer"></div>
+                    <a href="#embedded-system">
+                        <span>Embedded System Design</span>
+                        <div class="pointer"></div>
+                    </a>
                 </li>
                 <li class="nav-item" data-topic="fpga-design">
-                    <span>FPGA Design</span>
-                    <div class="pointer"></div>
+                    <a href="#fpga-design">
+                        <span>FPGA Design</span>
+                        <div class="pointer"></div>
+                    </a>
                 </li>
                 <li class="nav-item" data-topic="manufacturing">
-                    <span>Manufacturing and Assembly</span>
-                    <div class="pointer"></div>
+                    <a href="#manufacturing">
+                        <span>Manufacturing and Assembly</span>
+                        <div class="pointer"></div>
+                    </a>
                 </li>
                 <li class="nav-item" data-topic="inventory">
-                    <span>Managed Inventory and Logistics</span>
-                    <div class="pointer"></div>
+                    <a href="#inventory">
+                        <span>Managed Inventory and Logistics</span>
+                        <div class="pointer"></div>
+                    </a>
                 </li>
                 <li class="nav-item" data-topic="quality-assurance">
-                    <span>System Integration & Quality Assurance</span>
-                    <div class="pointer"></div>
+                    <a href="#quality-assurance">
+                        <span>System Integration & Quality Assurance</span>
+                        <div class="pointer"></div>
+                    </a>
                 </li>
             </ul>
 
@@ -221,7 +274,7 @@
                             production—is optimized to deliver smarter, reliable, and user-centric solutions that
                             redefine industry standards.
                         </p>
-                        <!-- Rest of Product Design content -->
+                        <img src="images/fulls/Product design and engineering.png" alt="Product Design" class="product-design-image">
                     </div>
                 </section>
 
@@ -237,7 +290,7 @@
                             operate with precision and efficiency, embodying our commitment to pioneering intelligent
                             product manufacturing.
                         </p>
-                        <!-- Rest of Embedded System content -->
+                        <img src="images/fulls/Embedded systems design 1.png" alt="embedded system design" class="product-design-image">
                     </div>
                 </section>
 
@@ -252,7 +305,8 @@
                             that meets the specific demands of advanced applications—from data centers to smart
                             devices—while ensuring that every solution is both innovative and seamlessly integrated into
                             your product ecosystem.</p>
-                        <!-- Rest of FPGA Design content -->
+                        <img src="images/fulls/fpga.png" alt="FPGA" class="product-design-image">
+
                     </div>
                 </section>
 
@@ -270,7 +324,7 @@
                             not only meets the highest quality standards but also embodies our commitment to delivering
                             seamless, end-to-end solutions.
                         </p>
-                        <!-- Rest of Manufacturing content -->
+                        <img src="images/fulls/manufacturing1.png" alt="Manufacturing and assembly" class="product-design-image">
                     </div>
                 </section>
 
@@ -285,7 +339,7 @@
                             efficiency. By integrating these capabilities with our manufacturing processes, we provide a
                             seamless supply chain that supports the rapid delivery of smarter, innovative devices to
                             market.</p>
-                        <!-- Rest of Inventory content -->
+                        <img src="images/fulls/Inventory.png" alt="Managed Inventory and Logistics" class="product-design-image">   
                     </div>
                 </section>
 
@@ -305,7 +359,7 @@
                             delivery—we are crafting a future where smarter devices and seamless end-to-end solutions
                             transform industries and elevate user experiences.
                         </p>
-                        <!-- Rest of Quality Assurance content -->
+                        <img src="images/fulls/QA.png" alt="Managed Inventory and Logistics" class="product-design-image">  
                     </div>
                 </section>
             </div>
@@ -452,6 +506,71 @@
             if (e.target === modal) {
                 closeSliderModal();
             }
+        });
+    </script>
+    <script>
+        // Function to update the active capability based on the current hash
+        function updateActiveCapability() {
+            // Get current hash (remove '#' and convert to lowercase)
+            let hash = window.location.hash.replace('#', '').toLowerCase();
+            // Define valid capability IDs; default to 'edge-ai' if none match
+            const validCapabilities = ['edge-ai', 'product-design', 'embedded-system', 'fpga-design', 'manufacturing', 'inventory', 'quality-assurance'];
+            if (!validCapabilities.includes(hash)) {
+                hash = 'edge-ai';
+            }
+
+            // Remove active class from all nav items and content sections
+            const navItems = document.querySelectorAll('.nav-item');
+            const contentSections = document.querySelectorAll('.content-section');
+            navItems.forEach(item => item.classList.remove('active'));
+            contentSections.forEach(section => section.classList.remove('active'));
+
+            // Add active class to the matching nav item and section
+            const targetNavItem = document.querySelector(`.nav-item[data-topic="${hash}"]`);
+            const targetSection = document.getElementById(hash);
+            if (targetNavItem && targetSection) {
+                targetNavItem.classList.add('active');
+                targetSection.classList.add('active');
+            }
+        }
+
+        // Update capability on initial load and when hash changes
+        document.addEventListener('DOMContentLoaded', updateActiveCapability);
+        window.addEventListener('hashchange', updateActiveCapability);
+
+        // Mobile nav toggle logic and auto-close on link click
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileNav = document.querySelector('.mobile-nav');
+
+            // Toggle mobile nav on hamburger click
+            hamburger.addEventListener('click', function () {
+                mobileNav.classList.toggle('active');
+                this.classList.toggle('active');
+            });
+
+            // Toggle submenus on arrow click
+            const submenuArrows = document.querySelectorAll('.submenu-arrow');
+            submenuArrows.forEach(arrow => {
+                arrow.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    const parentLi = this.closest('.has-submenu');
+                    parentLi.classList.toggle('open');
+                });
+            });
+
+            // Close mobile nav when any link inside it is clicked
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    mobileNav.classList.remove('active');
+                    hamburger.classList.remove('active');
+
+                    document.querySelectorAll('.has-submenu').forEach(submenu => {
+                        submenu.classList.remove('open');
+                      });
+                });
+            });
         });
     </script>
 

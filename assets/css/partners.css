@@ -2,7 +2,7 @@
 
 /* Partner Section Styles */
 #contact.partner-section {
-    background: linear-gradient(135deg, #2c3e50 0%, #4a5c6b 100%) !important;
+    background: linear-gradient(135deg, #141b41 0%, #4a5c6b 100%) !important;
     color: #ffffff !important;
     padding: 5rem 0 !important;
     text-align: center !important;
@@ -41,7 +41,7 @@
 #contact .partner-button {
     width: 260px !important;
     display: flex !important;
-    background: #694cc4 !important;
+    background: #141b41 !important;
     color: white !important;
     font-size: 1.1rem !important;
     font-weight: 600 !important;
@@ -50,7 +50,7 @@
     cursor: pointer !important;
     transition: all 0.3s ease !important;
     border: none !important;
-    box-shadow: 0 4px 15px rgba(70, 0, 233, 0.4) !important;
+    box-shadow: 0 4px 15px rgba(15, 18, 180, 0.4) !important;
     text-transform: uppercase !important;
     letter-spacing: 1px !important;
     justify-content: center !important;
@@ -58,9 +58,9 @@
 }
 
 #contact .partner-button:hover {
-    background: #694cc4 !important;
+    background: #141b41 !important;
     transform: translateY(-3px) !important;
-    box-shadow: 0 7px 20px rgba(102, 57, 176, 0.5) !important;
+    box-shadow: 0 4px 15px rgba(15, 18, 180, 0.4) !important;
 }
 
 /* Form Styles */
@@ -150,7 +150,7 @@
 #contact .partner-submit button {
     width: 260px !important;
     display: flex !important;
-    background: #694cc4 !important;
+    background: #141b41 !important;
     color: white !important;
     font-size: 1.1rem !important;
     font-weight: 600 !important;
@@ -159,7 +159,7 @@
     cursor: pointer !important;
     transition: all 0.3s ease !important;
     border: none !important;
-    box-shadow: 0 4px 15px rgba(70, 0, 233, 0.4) !important;
+    box-shadow: 0 4px 15px rgba(15, 18, 180, 0.4) !important;
     text-transform: uppercase !important;
     letter-spacing: 1px !important;
     justify-content: center !important;
@@ -167,7 +167,7 @@
 }
 
 #contact .partner-submit button:hover {
-    background: #694cc4 !important;
+    background: #141b41 !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
 }

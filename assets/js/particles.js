@@ -56,11 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         function updateParticles() {
-            context.fillStyle = 'rgba(6, 11, 64, 0.05)';
+            // Clear the entire canvas - use a solid fill to completely remove previous frames
+            context.fillStyle = 'rgba(6, 11, 64, 1)';  // Changed from 0.05 opacity to 1 (solid)
             context.fillRect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
             
             particles.forEach((particle, i) => {
-                let lp = { x: particle.position.x, y: particle.position.y };
+                // Remove this line to eliminate the previous position tracking
+                // let lp = { x: particle.position.x, y: particle.position.y };
                 
                 particle.offset.x += particle.speed;
                 particle.offset.y += particle.speed;
@@ -81,11 +83,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 context.beginPath();
                 context.fillStyle = particle.fillColor;
-                context.strokeStyle = particle.fillColor;
-                context.lineWidth = particle.size / 2;
-                context.moveTo(lp.x, lp.y);
-                context.lineTo(particle.position.x, particle.position.y);
-                context.stroke();
+                
+                // Remove these 4 lines to eliminate the trail drawing
+                // context.strokeStyle = particle.fillColor;
+                // context.lineWidth = particle.size / 2;
+                // context.moveTo(lp.x, lp.y);
+                // context.lineTo(particle.position.x, particle.position.y);
+                // context.stroke();
+                
+                // Only draw the circles (particles) without the trailing lines
                 context.arc(particle.position.x, particle.position.y, particle.size / 2, 0, Math.PI * 2, true);
                 context.fill();
             });

@@ -1,72 +1,53 @@
-/* Header */
+/* ------------------------------
+   Base Header (Desktop) Styles
+------------------------------- */
+
 #header {
     position: fixed;
     z-index: 10000;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
+    font-family: Arial, sans-serif;
     background: rgba(255, 253, 253, 0.95);
     height: 3em;
     line-height: 3em;
-    box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0.15em rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 1em;
-}
-
-#header picture {
+  }
+  
+  #header picture {
     height: 100%;
     display: flex;
     align-items: center;
-}
-
-#header picture img {
+  }
+  #header picture img {
     max-height: 80%;
     max-width: 150px;
     width: auto;
     height: auto;
     object-fit: contain;
-}
-
-/* Hamburger Button */
-.hamburger {
-    display: none; /* Hidden by default on desktop */
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5em;
-    z-index: 10001;
-}
-
-.hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: #353434;
-    margin: 5px 0;
-    transition: all 0.3s ease;
-}
-
-/* Nav Menu */
-.nav-menu {
+  }
+  
+  /* Desktop Navigation */
+  .desktop-nav {
     height: 100%;
     line-height: 3em;
-}
-
-.nav-menu ul {
+  }
+  .desktop-nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
-}
-
-.nav-menu ul li {
+  }
+  .desktop-nav ul li {
     display: inline-block;
     margin-left: 0.5em;
     font-size: 0.9em;
-}
-
-.nav-menu ul li a {
+  }
+  .desktop-nav ul li a {
     display: block;
     color: #353434;
     text-decoration: none;
@@ -74,85 +55,176 @@
     line-height: 3em;
     padding: 0 0.5em;
     transition: color 0.3s ease;
-}
-
-.nav-menu ul li a:hover {
+  }
+  .desktop-nav ul li a:hover {
     color: #534dcf;
-}
-
-/* Mobile Responsive */
-@media screen and (max-width: 736px) {
+  }
+  
+  /* Hamburger (hidden on desktop) */
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em;
+    z-index: 10001;
+  }
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #353434;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+  .mobile-nav {
+    display: none; /* Hide mobile nav by default */
+  }
+  
+  
+  /* ------------------------------
+     Mobile Styles (max-width:736px)
+  ------------------------------- */
+  @media screen and (max-width: 736px) {
+    /* Adjust header for mobile */
     #header {
-        height: 3em;
-        line-height: 3em;
+      height: 3em;
+      line-height: 3em;
     }
-
     #header picture img {
-        max-height: 70%;
-        max-width: 120px;
+      max-height: 70%;
+      max-width: 28px;
     }
-
-    /* Show Hamburger Button */
+  
+    /* Show hamburger, hide desktop nav */
     .hamburger {
-        display: block;
+      display: block;
+    }
+    .desktop-nav {
+      display: none;
+    }
+  
+    /* MOBILE NAV:
+       Slides down from above when .active is toggled */
+    .mobile-nav {
+      position: fixed;
+      display: block;
+      top: 3em;       /* Just below the header */
+      left: 50%;      /* Center horizontally */
+      width: 300px;   /* Adjust for your design */
+      background: #fdf9f3;
+      border-radius: 1rem;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  
+      transform: translate(-50%, -200%);
+      transition: transform 0.3s ease, visibility 0.3s ease;
+      z-index: 9999;
+      visibility: hidden; /* Not clickable when hidden */
+    }
+    .mobile-nav.active {
+      transform: translate(-50%, 0);
+      visibility: visible;
     }
 
-    /* Hide Nav by Default on Mobile */
-    .nav-menu {
+    .mobile-nav .has-submenu {
+        position: relative; /* yahi missing hai */
+    }
+  
+    /* Main Menu (top-level) */
+    .mobile-nav .main-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .mobile-nav .main-menu > li {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      padding: 0.75rem 1rem;
+      position: relative;
+      opacity: 0; /* for staggered animation */
+    }
+    .mobile-nav .main-menu > li:last-child {
+      border-bottom: none;
+    }
+    /* Link style */
+    .mobile-nav .main-menu > li a {
+      text-decoration: none;
+      color: #000;
+      display: block;
+      font-family: "Georgia", serif;
+      font-size: 1.2rem;
+    }
+  
+    /* Submenu arrow on the right */
+    .mobile-nav .submenu-arrow {
         position: absolute;
-        top: 3em;
-        left: 0;
-        width: 100%;
-        background: rgba(255, 253, 253, 0.95);
-        height: auto;
-        transform: translateY(-100%);
+        right: 1rem;
+        top: 50%;
+        margin-top: -0.6rem; /* Half of font-size to center it */
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: #353434;
         transition: transform 0.3s ease;
-        z-index: 9999;
-        visibility: hidden; /* Hidden initially */
     }
-
-    /* Show Nav When Active */
-    .nav-menu.active {
-        transform: translateY(0);
-        visibility: visible;
+    
+    /* Rotate arrow if .open is toggled on parent li */
+    .mobile-nav .has-submenu.open .submenu-arrow {
+        transform: rotate(180deg);
+        margin-top: -0.6rem;
     }
-
-    .nav-menu ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
+  
+    /* Sub-menu (hidden by default) */
+    .mobile-nav .sub-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0 1rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
     }
-
-    .nav-menu ul li {
-        display: block;
-        margin: 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    /* Expand sub-menu if parent li has .open */
+    .mobile-nav .has-submenu.open .sub-menu {
+      max-height: 500px; /* Enough to show all items */
     }
-
-    .nav-menu ul li a {
-        height: 2.5em;
-        line-height: 2.5em;
-        padding: 0;
+    .mobile-nav .sub-menu li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
-
-    /* Hamburger Animation When Active */
-    .hamburger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+    .mobile-nav .sub-menu li:last-child {
+      border-bottom: none;
     }
-
-    .hamburger.active span:nth-child(2) {
+    .mobile-nav .sub-menu li a {
+      color: #333;
+      white-space: nowrap;
+      font-size: 1.1rem;
+    }
+  
+    /* Staggered fade-down animation */
+    @keyframes slideDown {
+      from {
         opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-
-    .hamburger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -7px);
+    .mobile-nav.active .main-menu > li {
+      animation: slideDown 0.3s forwards;
     }
-}
-
-/* Larger Screens */
-@media screen and (min-width: 1200px) {
+    .mobile-nav.active .main-menu > li:nth-child(1) { animation-delay: 0.1s; }
+    .mobile-nav.active .main-menu > li:nth-child(2) { animation-delay: 0.2s; }
+    .mobile-nav.active .main-menu > li:nth-child(3) { animation-delay: 0.3s; }
+    .mobile-nav.active .main-menu > li:nth-child(4) { animation-delay: 0.4s; }
+    .mobile-nav.active .main-menu > li:nth-child(5) { animation-delay: 0.5s; }
+    .mobile-nav.active .main-menu > li:nth-child(6) { animation-delay: 0.6s; }
+  }
+  
+  /* Larger Screens (optional) */
+  @media screen and (min-width: 1200px) {
     #header picture img {
-        max-height: 90%;
-        max-width: 180px;
+      max-height: 90%;
+      max-width: 180px;
     }
-}
+  }

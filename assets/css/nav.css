@@ -215,7 +215,12 @@ header h1 {
         flex-direction: column;
     }
     
+    #current-topic {
+        display: none; 
+    }
+    
     .sidebar {
+        display: none !important;;
         width: 100vw;
         height: auto;
         padding: 1rem 0;

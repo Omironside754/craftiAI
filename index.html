@@ -1,54 +1,93 @@
 <!DOCTYPE HTML>
 <html>
 
-	<head>
-		<title>Craftifai</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/about.css">
-		<link rel="stylesheet" href="assets/css/one.css" />
-		<link rel="stylesheet" href="assets/css/partners.css" />
-		<link rel="stylesheet" href="assets/css/footer.css" />
-		<link rel="stylesheet" href="assets/css/products.css" />
-		<link rel="stylesheet" href="assets/css/header.css" />
-		<link rel="stylesheet" href="assets/css/intro.css" />
-		<link rel="stylesheet" href="assets/css/industries.css" />
-		<link rel="stylesheet" href="assets/css/nav.css" /> 
-		<noscript>
-			<link rel="stylesheet" href="assets/css/noscript.css" />
-		</noscript>
-	</head>
+<head>
+	<title>Craftifai</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="assets/css/about.css">
+	<link rel="stylesheet" href="assets/css/one.css" />
+	<link rel="stylesheet" href="assets/css/partners.css" />
+	<link rel="stylesheet" href="assets/css/footer.css" />
+	<link rel="stylesheet" href="assets/css/products.css" />
+	<link rel="stylesheet" href="assets/css/header.css" />
+	<link rel="stylesheet" href="assets/css/intro.css" />
+	<link rel="stylesheet" href="assets/css/industries.css" />
+	<link rel="stylesheet" href="assets/css/nav.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
 
 <body class="is-preload" style="overflow-y: auto;">
 	<!-- Header -->
 	<header id="header">
-		<picture>
-		  <!-- Mobile Logo -->
-		  <source srcset="images/LogoM.png" media="(max-width: 736px)">
-		  <!-- Desktop Logo -->
-		  <img src="images/LogoC.png" alt="Craftifai Logo">
-		</picture>
-	  
-		<!-- Hamburger Button for Mobile -->
-		<button class="hamburger" aria-label="Toggle Menu">
-		  <span></span>
-		  <span></span>
-		  <span></span>
-		</button>
-	  
-		<nav class="nav-menu">
-		  <ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="capabilities.html">Capabilities</a></li>
-			<li><a href="industries.html">Industries</a></li>
-			<li><a href="index.html#two">Company</a></li>
-			<li><a href="products.html">Products</a></li>
-			<li><a href="#contact">Contact</a></li>
-		  </ul>
-		</nav>
-	  </header>
-	  
+        <a href="index.html">
+            <picture>
+                <source srcset="images/LogoM.png" media="(max-width: 736px)">
+                <img src="images/LogoC.png" alt="Craftifai Logo">
+            </picture>
+        </a>
+        <button class="hamburger" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav-menu desktop-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="capabilities.html">Capabilities</a></li>
+                <li><a href="industries.html">Industries</a></li>
+                <li><a href="index.html#two">Company</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <nav class="mobile-nav">
+        <ul class="main-menu">
+            <li><a href="index.html">Home</a></li>
+            <li class="has-submenu">
+                <a href="capabilities.html">Capabilities</a>
+                <span class="submenu-arrow">&#9660;</span>
+                <ul class="sub-menu">
+                    <li><a href="capabilities.html#edge-ai">Edge AI Solutions</a></li>
+                    <li><a href="capabilities.html#product-design">Product Design & Engineering</a></li>
+                    <li><a href="capabilities.html#embedded-system">Embedded System Design</a></li>
+                    <li><a href="capabilities.html#fpga-design">FPGA Design</a></li>
+                    <li><a href="capabilities.html#manufacturing">Manufacturing and Assembly</a></li>
+                    <li><a href="capabilities.html#inventory">Managed Inventory and Logistics</a></li>
+                    <li><a href="capabilities.html#quality-assurance">System Integration & Quality Assurance</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="industries.html">Industries</a>
+                <span class="submenu-arrow">&#9660;</span>
+                <ul class="sub-menu">
+                    <li><a href="industries.html#consumer-electronics">Consumer Electronics & IoT Devices</a></li>
+                    <li><a href="industries.html#security-surveillance">Security & Surveillance</a></li>
+                    <li><a href="industries.html#energy-utilities">Energy & Utilities</a></li>
+                    <li><a href="industries.html#industrial">Industrial</a></li>
+                    <li><a href="industries.html#robotics">Robotics</a></li>
+                    <li><a href="industries.html#aerospace-defense">Aerospace & Defense</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="index.html#two">Company</a></li>
+            <li class="has-submenu">
+                <a>Products</a>
+                <span class="submenu-arrow">&#9660;</span>
+                <ul class="sub-menu">
+                    <!-- Using hash links so that the same page content changes -->
+                    <li><a href="products.html#ipg">Intelligent Pipeline Generator</a></li>
+                    <li><a href="products.html#mlops">Intelligent Edge MLops</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
 
 	<!-- Intro -->
@@ -91,7 +130,8 @@
 			<h1>Capabilities</h1>
 		</div>
 		<div id="card-container">
-			<div class="content box style2" id="c1" style="background-image: url('images/fulls/Edge\ AI\ solutions.png');">
+			<div class="content box style2" id="c1"
+				style="background-image: url('images/fulls/Edge\ AI\ solutions.png');">
 				<header>
 					<h3>Edge AI Solutions</h3>
 				</header>
@@ -102,7 +142,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="content box style2" id="c2" style="background-image: url('images/fulls/Product\ design\ and\ engineering.png');">
+			<div class="content box style2" id="c2"
+				style="background-image: url('images/fulls/Product\ design\ and\ engineering.png');">
 				<header>
 					<h3>Product Design & Engineering</h3>
 				</header>
@@ -113,7 +154,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="content box style2" id="c3" style="background-image: url('images/fulls/Embedded\ systems\ design\ 1.png');">
+			<div class="content box style2" id="c3"
+				style="background-image: url('images/fulls/Embedded\ systems\ design\ 1.png');">
 				<header>
 					<h3>Embedded System Design</h3>
 				</header>
@@ -177,11 +219,13 @@
 		<h1 class="section-title">Industries We Serve</h1>
 		<div class="industries-grid">
 			<div class="industry-card" data-industry="consumer-electronics">
-				<img src="images/Consumer electronics and Iot 2.webp" alt="Consumer Electronics & IoT" class="industry-image">
+				<img src="images/Consumer electronics and Iot 2.webp" alt="Consumer Electronics & IoT"
+					class="industry-image">
 				<h3>Consumer Electronics & IoT Devices</h3>
 			</div>
 			<div class="industry-card" data-industry="security-surveillance">
-				<img src="images/Security and Surveillance industry 2.webp" alt="Security & Surveillance" class="industry-image">
+				<img src="images/Security and Surveillance industry 2.webp" alt="Security & Surveillance"
+					class="industry-image">
 				<h3>Security & Surveillance</h3>
 			</div>
 			<div class="industry-card" data-industry="industrial">
@@ -203,45 +247,45 @@
 		</div>
 	</section>
 
-	
+
 	<section id="products">
 		<div class="products-container">
 
-		  <canvas id="products-particle-canvas"></canvas>
-		  <h1>Products</h1>
+			<canvas id="products-particle-canvas"></canvas>
+			<h1>Products</h1>
 
-		  <div class="product-list">	
-			<!-- Product 1 -->
-			<div class="product" id="ipg">
-			  <div class="product-header">
-				<h2>Intelligent Pipeline Generator</h2>
-			  </div>
-			  <div class="product-content">
-				<img src="images/fulls/ipg1.png" alt="Intelligent Pipeline Generator">
-				<div class="product-text">
-				  <p>An AI-driven pipeline generator to automate workflows efficiently.</p>
+			<div class="product-list">
+				<!-- Product 1 -->
+				<div class="product" id="ipg">
+					<div class="product-header">
+						<h2>Intelligent Pipeline Generator</h2>
+					</div>
+					<div class="product-content">
+						<img src="images/fulls/ipg1.png" alt="Intelligent Pipeline Generator">
+						<div class="product-text">
+							<p>An AI-driven pipeline generator to automate workflows efficiently.</p>
+						</div>
+						<button class="explore-mobile" data-product="ipg">Explore More IPG</button>
+					</div>
 				</div>
-				<button class="explore-mobile" data-product="ipg">Explore More IPG</button>
-			  </div>
+
+				<!-- Product 2 -->
+				<div class="product" id="mlops">
+					<div class="product-header">
+						<h2>Intelligent Edge MLOps</h2>
+					</div>
+					<div class="product-content">
+						<img src="images/fulls/mlops.png" alt="Intelligent Edge MLOps">
+						<div class="product-text">
+							<p>End-to-end machine learning operations for scalable AI deployment.</p>
+						</div>
+						<button class="explore-mobile" data-product="mlops">Explore More MLOps</button>
+					</div>
+				</div>
 			</div>
-			
-			<!-- Product 2 -->
-			<div class="product" id="mlops">
-			  <div class="product-header">
-				<h2>Intelligent Edge MLOps</h2>
-			  </div>
-			  <div class="product-content">
-				<img src="images/fulls/mlops.png" alt="Intelligent Edge MLOps">
-				<div class="product-text">
-				  <p>End-to-end machine learning operations for scalable AI deployment.</p>
-				</div>
-				<button class="explore-mobile" data-product="mlops">Explore More MLOps</button>
-			  </div>
-			</div>	
-		  </div>
-		</div> 
+		</div>
 	</section>
-	  
+
 
 	<!-- Partner with Craftifai Section -->
 	<section id="contact" class="partner-section">
@@ -271,7 +315,8 @@
 								<input type="tel" name="phone" placeholder="Phone Number" />
 							</div>
 							<div class="partner-field full">
-								<textarea name="message" placeholder="Tell us about your partnership interests..." rows="5" required></textarea>
+								<textarea name="message" placeholder="Tell us about your partnership interests..."
+									rows="5" required></textarea>
 							</div>
 						</div>
 						<div class="partner-submit">
@@ -310,41 +355,124 @@
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 	<script src="assets/js/contact.js"></script>
 	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-		  const products = document.querySelectorAll(".product");
-		  const exploreButtons = document.querySelectorAll(".explore-mobile");
-		
-		  // Accordion toggle on the header
-		  products.forEach((product) => {
-			const header = product.querySelector(".product-header");
-		
-			header.addEventListener("click", () => {
-			  // If this product is already open, close it
-			  if (product.classList.contains("expand")) {
-				product.classList.remove("expand");
-			  } else {
-				// Close any open product first
-				products.forEach(p => p.classList.remove("expand"));
-				// Expand this one
-				product.classList.add("expand");
-			  }
+		document.addEventListener("DOMContentLoaded", function () {
+			const products = document.querySelectorAll(".product");
+
+			// Track which product is currently expanded
+			let expandedProduct = null;
+
+			products.forEach((product) => {
+				const header = product.querySelector(".product-header");
+				const exploreBtn = product.querySelector(".explore-mobile");
+
+				header.setAttribute('tabindex', '0');
+				header.setAttribute('role', 'button');
+				header.setAttribute('aria-expanded', 'false');
+
+				// Header click - toggle expand/collapse
+				header.addEventListener("click", (e) => {
+					e.stopPropagation(); // prevent bubble to document click
+
+					// If this product is already expanded, collapse it
+					if (expandedProduct === product) {
+						product.classList.remove("expand");
+						header.setAttribute('aria-expanded', 'false');
+						// Make sure the header becomes visible again
+						setTimeout(() => {
+							header.style.opacity = "1";
+							header.style.height = "auto";
+							header.style.margin = "0 0 1rem 0";
+							header.style.padding = "initial";
+							header.style.overflow = "visible";
+						}, 300); // Small delay to allow transition
+						expandedProduct = null;
+						return;
+					}
+
+					// Collapse any currently expanded product
+					if (expandedProduct) {
+						expandedProduct.classList.remove("expand");
+						const prevHeader = expandedProduct.querySelector(".product-header");
+						prevHeader.setAttribute('aria-expanded', 'false');
+						// Make sure the previous header becomes visible again
+						setTimeout(() => {
+							prevHeader.style.opacity = "1";
+							prevHeader.style.height = "auto";
+							prevHeader.style.margin = "0 0 1rem 0";
+							prevHeader.style.padding = "initial";
+							prevHeader.style.overflow = "visible";
+						}, 300); // Small delay to allow transition
+					}
+
+					// Expand this product
+					product.classList.add("expand");
+					header.setAttribute('aria-expanded', 'true');
+					expandedProduct = product;
+				});
+
+				header.addEventListener("keypress", (e) => {
+					if (e.key === "Enter" || e.key === " ") {
+						e.preventDefault();
+						header.click();
+					}
+				});
+
+				// Explore More button click
+				exploreBtn?.addEventListener("click", (e) => {
+					e.stopPropagation(); // avoid triggering collapse
+					const productId = exploreBtn.getAttribute("data-product");
+					if (productId) {
+						window.location.href = `products.html?product=${productId}`;
+					}
+				});
 			});
+
+			// --- Global Document Click ---
+			// Clicking outside will collapse all
+			document.addEventListener("click", () => {
+				if (expandedProduct) {
+					expandedProduct.classList.remove("expand");
+					const header = expandedProduct.querySelector(".product-header");
+					header.setAttribute('aria-expanded', 'false');
+					// Make sure the header becomes visible again
+					setTimeout(() => {
+						header.style.opacity = "1";
+						header.style.height = "auto";
+						header.style.margin = "0 0 1rem 0";
+						header.style.padding = "initial";
+						header.style.overflow = "visible";
+					}, 300); // Small delay to allow transition
+					expandedProduct = null;
+				}
+			});
+		});
+	</script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+		  // 1. Toggle the mobile nav on hamburger click
+		  const hamburger = document.querySelector('.hamburger');
+		  const mobileNav = document.querySelector('.mobile-nav');
+	  
+		  hamburger.addEventListener('click', function() {
+			mobileNav.classList.toggle('active');
+			this.classList.toggle('active'); // optional: animate hamburger
 		  });
-		
-		  // "Explore More" button click -> redirect
-		  exploreButtons.forEach((btn) => {
-			btn.addEventListener("click", (e) => {
-			  // Prevent the header click from toggling
-			  e.stopPropagation();
-		
-			  const productId = btn.getAttribute("data-product");
-			  // Redirect to products.html with ?product=... query
-			  window.location.href = `products.html?product=${productId}`;
+	  
+		  // 2. Toggle each submenu on arrow click
+		  const arrows = document.querySelectorAll('.submenu-arrow');
+		  arrows.forEach(arrow => {
+			arrow.addEventListener('click', function(e) {
+			  e.stopPropagation(); // prevent link from firing
+			  // Toggle the .open class on the parent <li class="has-submenu">
+			  const parentLi = this.closest('.has-submenu');
+			  parentLi.classList.toggle('open');
 			});
 		  });
 		});
-		</script>
-		
+	  </script>
+
+
+
 </body>
 
 </html>

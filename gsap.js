@@ -18,7 +18,7 @@ if (cards.length > 0) {
       x: "50vw",
       y: "50vh",
       opacity: 0,
-      rotation: 20,
+      rotation: 0,
       scale: 0.9,
     });
   }
@@ -59,7 +59,7 @@ if (cards.length > 0) {
           x: gsap.utils.interpolate("20vw", 140, progress),
           opacity: 1,
           scale: gsap.utils.interpolate(0.9, 1, progress),
-          
+          rotation: gsap.utils.interpolate(0, 0, progress),
           zIndex: index,
           ease: "power4.out",
           duration: 0.5,
@@ -71,7 +71,7 @@ if (cards.length > 0) {
           x: gsap.utils.interpolate(baseXStart, index * baseXIncrement, progress),
           opacity: 1,
           scale: gsap.utils.interpolate(0.9, 1, progress),
-          rotation: gsap.utils.interpolate(20, 0, progress),
+          rotation: gsap.utils.interpolate(0, 0, progress),
           zIndex: index,
           ease: "power4.out",
           duration: 0.5,

@@ -51,7 +51,7 @@ body {
 }
 .ipg-feature-box {
   flex: 1 1 calc(33.333% - 1rem); /* 3 boxes per row on wide screens */
-  background-color: #2c2c2c;
+  background-color: rgba(1, 7, 13, 0.8);
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1rem;
@@ -64,7 +64,7 @@ body {
 }
 .mlops-feature-box {
   flex: 1 1 calc(33.333% - 1rem); /* 3 boxes per row on wide screens */
-  background-color: #2c2c2c;
+  background-color: rgba(1, 7, 13, 0.8);
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1rem;

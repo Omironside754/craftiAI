@@ -71,22 +71,18 @@
 <body>
     <!-- Header from index.html -->
     <header id="header">
-        <picture>
-            <!-- Mobile Logo -->
-            <source srcset="images/LogoM.png" media="(max-width: 736px)" />
-            <!-- Desktop Logo -->
-            <img src="images/LogoC.png" alt="Craftifai Logo" />
-        </picture>
-
-        <!-- Hamburger Button for Mobile -->
+        <a href="index.html">
+            <picture>
+                <source srcset="images/LogoM.png" media="(max-width: 736px)">
+                <img src="images/LogoC.png" alt="Craftifai Logo">
+            </picture>
+        </a>
         <button class="hamburger" aria-label="Toggle Menu">
             <span></span>
             <span></span>
             <span></span>
         </button>
-
-        <!-- Updated Navigation Menu -->
-        <nav class="nav-menu">
+        <nav class="nav-menu desktop-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="capabilities.html">Capabilities</a></li>
@@ -96,35 +92,77 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-
     </header>
+
+    <nav class="mobile-nav">
+        <ul class="main-menu">
+            <li><a href="index.html">Home</a></li>
+            <li class="has-submenu">
+                <a href="capabilities.html">Capabilities</a>
+                <span class="submenu-arrow">&#9660;</span>
+                <ul class="sub-menu">
+                    <li><a href="capabilities.html#edge-ai">Edge AI Solutions</a></li>
+                    <li><a href="capabilities.html#product-design">Product Design & Engineering</a></li>
+                    <li><a href="capabilities.html#embedded-system">Embedded System Design</a></li>
+                    <li><a href="capabilities.html#fpga-design">FPGA Design</a></li>
+                    <li><a href="capabilities.html#manufacturing">Manufacturing and Assembly</a></li>
+                    <li><a href="capabilities.html#inventory">Managed Inventory and Logistics</a></li>
+                    <li><a href="capabilities.html#quality-assurance">System Integration & Quality Assurance</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu">
+                <a href="industries.html">Industries</a>
+                <span class="submenu-arrow">&#9660;</span>
+                <ul class="sub-menu">
+                    <li><a href="industries.html#consumer-electronics">Consumer Electronics & IoT Devices</a></li>
+                    <li><a href="industries.html#security-surveillance">Security & Surveillance</a></li>
+                    <li><a href="industries.html#energy-utilities">Energy & Utilities</a></li>
+                    <li><a href="industries.html#industrial">Industrial</a></li>
+                    <li><a href="industries.html#robotics">Robotics</a></li>
+                    <li><a href="industries.html#aerospace-defense">Aerospace & Defense</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="index.html#two">Company</a></li>
+            <li class="has-submenu">
+                <a>Products</a>
+                <span class="submenu-arrow">&#9660;</span>
+                <ul class="sub-menu">
+                    <!-- Using hash links so that the same page content changes -->
+                    <li><a href="products.html#ipg">Intelligent Pipeline Generator</a></li>
+                    <li><a href="products.html#mlops">Intelligent Edge MLops</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
         <!-- Left Navigation Bar -->
         <nav class="sidebar">
             <ul class="nav-links">
                 <li class="nav-item active" data-topic="consumer-electronics">
-                    <span>Consumer Electronics &amp; IoT Devices</span>
+                    <a href="#consumer-electronics">Consumer Electronics &amp; IoT Devices</a>
                     <div class="pointer"></div>
                 </li>
                 <li class="nav-item" data-topic="security-surveillance">
-                    <span>Security &amp; Surveillance</span>
+                    <a href="#security-surveillance">Security &amp; Surveillance</a>
                     <div class="pointer"></div>
                 </li>
                 <li class="nav-item" data-topic="energy-utilities">
-                    <span>Energy &amp; Utilities</span>
+                    <a href="#energy-utilities">Energy &amp; Utilities</a>
                     <div class="pointer"></div>
                 </li>
                 <li class="nav-item" data-topic="industrial">
-                    <span>Industrial</span>
+                    <a href="#industrial">Industrial</a>
                     <div class="pointer"></div>
                 </li>
                 <li class="nav-item" data-topic="robotics">
-                    <span>Robotics</span>
+                    <a href="#robotics">Robotics</a>
                     <div class="pointer"></div>
                 </li>
                 <li class="nav-item" data-topic="aerospace-defense">
-                    <span>Aerospace &amp; Defense</span>
+                    <a href="#aerospace-defense">Aerospace &amp; Defense</a>
                     <div class="pointer"></div>
                 </li>
             </ul>
@@ -333,6 +371,71 @@
             document.querySelector('.nav-item[data-topic="consumer-electronics"]').classList.add('active');
             document.getElementById('consumer-electronics').classList.add('active');
         }
+    </script>
+    <script>
+        // Function to update the active capability based on the current hash
+        function updateActiveIndustry() {
+            // Get current hash (remove '#' and convert to lowercase)
+            let hash = window.location.hash.replace('#', '').toLowerCase();
+            // Define valid Industry IDs; default to 'consumer-electronics' if none match
+            const validIndustries = ['consumer-electronics', 'security-surveillance', 'energy-utilities', 'industrial', 'robotics', 'aerospace-defense'];
+            if (!validIndustries.includes(hash)) {
+                hash = 'consumer-electronics';
+            }
+
+            // Remove active class from all nav items and content sections
+            const navItems = document.querySelectorAll('.nav-item');
+            const contentSections = document.querySelectorAll('.content-section');
+            navItems.forEach(item => item.classList.remove('active'));
+            contentSections.forEach(section => section.classList.remove('active'));
+
+            // Add active class to the matching nav item and section
+            const targetNavItem = document.querySelector(`.nav-item[data-topic="${hash}"]`);
+            const targetSection = document.getElementById(hash);
+            if (targetNavItem && targetSection) {
+                targetNavItem.classList.add('active');
+                targetSection.classList.add('active');
+            }
+        }
+
+        // Update Industry on initial load and when hash changes
+        document.addEventListener('DOMContentLoaded', updateActiveIndustry);
+        window.addEventListener('hashchange', updateActiveIndustry);
+
+        // Mobile nav toggle logic and auto-close on link click
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileNav = document.querySelector('.mobile-nav');
+
+            // Toggle mobile nav on hamburger click
+            hamburger.addEventListener('click', function () {
+                mobileNav.classList.toggle('active');
+                this.classList.toggle('active');
+            });
+
+            // Toggle submenus on arrow click
+            const submenuArrows = document.querySelectorAll('.submenu-arrow');
+            submenuArrows.forEach(arrow => {
+                arrow.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    const parentLi = this.closest('.has-submenu');
+                    parentLi.classList.toggle('open');
+                });
+            });
+
+            // Close mobile nav when any link inside it is clicked
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function () {
+                    mobileNav.classList.remove('active');
+                    hamburger.classList.remove('active');
+
+                    document.querySelectorAll('.has-submenu').forEach(submenu => {
+                        submenu.classList.remove('open');
+                      });
+                });
+            });
+        });
     </script>
 </body>
 
