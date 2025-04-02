@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capabilities - Dark Mode Content Explorer</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/about.css">
+		<link rel="stylesheet" href="assets/css/one.css" />
+		<link rel="stylesheet" href="assets/css/partners.css" />
+		<link rel="stylesheet" href="assets/css/footer.css" />
+		<link rel="stylesheet" href="assets/css/products.css" />
+		<link rel="stylesheet" href="assets/css/header.css" />
+		<link rel="stylesheet" href="assets/css/intro.css" />
+		<link rel="stylesheet" href="assets/css/industries.css" />
+		<link rel="stylesheet" href="assets/css/nav.css" /> 
+    <link rel="stylesheet" href="assets/css/Cpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.min.css">
+    <!-- Add some basic CSS for the button -->
+    <style>
+        /* Ensure body allows overflow for button visibility */
+        body {
+            overflow-y: auto !important;
+            /* Allow scrolling if needed */
+        }
+
+        .sidebar {
+            position: relative;
+            /* To allow absolute positioning of the button inside */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* To push the button to the bottom */
+        }
+
+        .redirect-button {
+            text-align: center;
+            padding: 10px;
+            position: sticky;
+            /* Fix the button at the bottom */
+            bottom: 0;
+            /* Stick to the bottom of the sidebar */
+            background-color: var(--nav-bg);
+            /* Match sidebar background */
+        }
+
+        .back-to-contact-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4a4a4a;
+            /* Grey color for the button */
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color var(--transition-speed) ease;
+        }
+
+        .back-to-contact-btn:hover {
+            background-color: #5a5a5a;
+            /* Slightly lighter grey on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header from index.html -->
+    <header id="header">
+        <picture>
+            <!-- Mobile Logo -->
+            <source srcset="images/LogoM.png" media="(max-width: 736px)">
+            <!-- Desktop Logo -->
+            <img src="images/LogoC.png" alt="Craftifai Logo">
+        </picture>
+
+        <!-- Hamburger Button for Mobile -->
+        <button class="hamburger" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="capabilities.html">Capabilities</a></li>
+                <li><a href="industries.html">Industries</a></li>
+                <li><a href="index.html#two">Company</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="container">
+        <!-- Left Navigation Bar -->
+        <nav class="sidebar">
+            <ul class="nav-links">
+                <li class="nav-item active" data-topic="edge-ai">
+                    <span>Edge AI Solutions</span>
+                    <div class="pointer"></div>
+                </li>
+                <li class="nav-item" data-topic="product-design">
+                    <span>Product Design & Engineering</span>
+                    <div class="pointer"></div>
+                </li>
+                <li class="nav-item" data-topic="embedded-system">
+                    <span>Embedded System Design</span>
+                    <div class="pointer"></div>
+                </li>
+                <li class="nav-item" data-topic="fpga-design">
+                    <span>FPGA Design</span>
+                    <div class="pointer"></div>
+                </li>
+                <li class="nav-item" data-topic="manufacturing">
+                    <span>Manufacturing and Assembly</span>
+                    <div class="pointer"></div>
+                </li>
+                <li class="nav-item" data-topic="inventory">
+                    <span>Managed Inventory and Logistics</span>
+                    <div class="pointer"></div>
+                </li>
+                <li class="nav-item" data-topic="quality-assurance">
+                    <span>System Integration & Quality Assurance</span>
+                    <div class="pointer"></div>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <div class="content-container">
+                <header>
+                    <h1 id="current-topic">Capabilities</h1>
+                </header>
+
+                <!-- Content sections for each capability -->
+                <!-- Flickity Carousel -->
+                <section class="content-section" id="edge-ai">
+                    <div class="content-wrapper">
+                        <h2>Edge AI Solutions</h2>
+                        <p>Empowering Devices with Intelligent Decentralization</p>
+                        <p>Our Edge AI Solutions bring intelligence directly to the device, enabling rapid,
+                            real-time decision-making at the network’s periphery. By leveraging GenAI-powered
+                            analytics and machine learning, we equip products with the ability to process data
+                            locally, reduce latency, and enhance responsiveness. This decentralized approach
+                            not only improves performance but also ensures robust connectivity and scalability
+                            across diverse applications—from smart cities to industrial automation—while
+                            maintaining our commitment to design excellence and seamless integration.</p>
+
+                        <div class="gallery js-flickity" data-flickity-options='{
+            "wrapAround": true,
+            "autoPlay": 3000,
+            "pauseAutoPlayOnHover": false,
+            "groupCells": false
+        }'>
+                            <div class="gallery-cell">
+                                <img src="images/SMARTVISION.png" alt="Smart Vision">
+                                <h3>Smart Vision</h3>
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="images/robotics.png" alt="Payment">
+                                <h3>Payment</h3>
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="images/DRONES.png" alt="Drones">
+                                <h3>Drones</h3>
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="images/INDUSTRIAL.png" alt="Industrial">
+                                <h3>Industrial</h3>
+                            </div>
+                            <div class="gallery-cell">
+                                <img src="images/ROBOTICS.png" alt="Robotics">
+                                <h3>Robotics</h3>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ✅ Image Modal -->
+                <div id="imageModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="modalImage">
+                </div>
+                <!-- Fullscreen Image Slider Modal -->
+                <div id="imageSliderModal" class="modal slider-modal">
+                    <span class="close" onclick="closeSliderModal()">&times;</span>
+                    <div class="slider-content">
+                        <button class="slider-nav left" onclick="prevSlide()">&#10094;</button>
+                        <img id="sliderImage" src="" alt="Expanded View">
+                        <button class="slider-nav right" onclick="nextSlide()">&#10095;</button>
+                    </div>
+                </div>
+
+
+
+
+                <!-- Modal Structure (hidden by default) -->
+                <div id="customModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="modal-body" id="modalInfo"></div>
+                    </div>
+                </div>
+
+
+
+                <section class="content-section" id="product-design">
+                    <div class="content-wrapper">
+                        <h2>Product Design & Engineering</h2>
+                        <p>Innovating Tomorrow’s Products Today</p>
+                        <p>At the core of our mission lies an unwavering commitment to design excellence. Our Product
+                            Design & Engineering team harnesses GenAI-driven insights to transform creative ideas into
+                            tangible, market-ready products. By merging innovative design with rigorous engineering
+                            practices, we create devices that are not only visually striking but also engineered for
+                            peak performance and efficiency. Every step—from conceptualization and prototyping to final
+                            production—is optimized to deliver smarter, reliable, and user-centric solutions that
+                            redefine industry standards.
+                        </p>
+                        <!-- Rest of Product Design content -->
+                    </div>
+                </section>
+
+                <section class="content-section" id="embedded-system">
+                    <div class="content-wrapper">
+                        <h2>Embedded System Design</h2>
+                        <p>Seamless Integration of Intelligence into Every Device</p>
+                        <p>Our Embedded System Design capability focuses on integrating robust computing power within
+                            physical devices. With GenAI at the helm, we develop custom embedded systems that ensure
+                            optimal performance, reliability, and connectivity. These systems serve as the intelligent
+                            backbone for a wide range of applications, providing real-time control and communication
+                            between hardware and software components. The result is a suite of smarter devices that
+                            operate with precision and efficiency, embodying our commitment to pioneering intelligent
+                            product manufacturing.
+                        </p>
+                        <!-- Rest of Embedded System content -->
+                    </div>
+                </section>
+
+                <section class="content-section" id="fpga-design">
+                    <div class="content-wrapper">
+                        <h2>FPGA Design</h2>
+                        <p>Accelerating Performance with Custom Hardware Solutions</p>
+                        <p>Field Programmable Gate Arrays (FPGAs) are at the heart of high-performance computing, and
+                            our FPGA Design services are engineered to push the limits of efficiency and speed. By
+                            utilizing GenAI-powered design processes, we craft custom FPGA solutions that deliver
+                            unparalleled parallel processing and adaptability. This enables the creation of hardware
+                            that meets the specific demands of advanced applications—from data centers to smart
+                            devices—while ensuring that every solution is both innovative and seamlessly integrated into
+                            your product ecosystem.</p>
+                        <!-- Rest of FPGA Design content -->
+                    </div>
+                </section>
+
+                <section class="content-section" id="manufacturing">
+                    <div class="content-wrapper">
+                        <h2>Manufacturing and Assembly</h2>
+                        <p>Precision Production for Superior Quality</p>
+                        <p>With our worldwide network of curated partner manufacturing plants, we can have the devices
+                            built to your specification at a competitive cost and get it delivered to your doorstep with
+                            the best lead times. Our state-of-the-art Manufacturing and Assembly processes are built on
+                            a foundation of GenAI-powered efficiency. By automating critical production stages and
+                            integrating smart quality controls, we ensure every product is crafted with precision and
+                            consistency. Our streamlined assembly lines are designed to adapt dynamically to production
+                            needs, reducing waste and enhancing throughput. This approach guarantees that every device
+                            not only meets the highest quality standards but also embodies our commitment to delivering
+                            seamless, end-to-end solutions.
+                        </p>
+                        <!-- Rest of Manufacturing content -->
+                    </div>
+                </section>
+
+                <section class="content-section" id="inventory">
+                    <div class="content-wrapper">
+                        <h2>Managed Inventory and Logistics</h2>
+                        <p>Optimizing Supply Chains with Intelligent Oversight</p>
+                        <p>Effective inventory and logistics management are vital to our end-to-end manufacturing
+                            solutions. Our managed inventory and logistics services employ GenAI-driven systems to
+                            forecast demand, streamline storage, and ensure timely distribution. This intelligent
+                            oversight minimizes operational overhead, reduces lead times, and enhances overall
+                            efficiency. By integrating these capabilities with our manufacturing processes, we provide a
+                            seamless supply chain that supports the rapid delivery of smarter, innovative devices to
+                            market.</p>
+                        <!-- Rest of Inventory content -->
+                    </div>
+                </section>
+
+                <section class="content-section" id="quality-assurance">
+                    <div class="content-wrapper">
+                        <h2>System Integration & Quality Assurance</h2>
+                        <p>Ensuring Cohesion and Excellence at Every Stage</p>
+                        <p>The final step in our value chain is System Integration & Quality Assurance—where all
+                            components converge to form a unified, high-performance product. Our comprehensive
+                            integration process combines hardware, software, and logistics into a cohesive system,
+                            underpinned by rigorous quality assurance protocols. Utilizing GenAI-powered testing and
+                            real-time monitoring, we ensure that every device meets strict performance and reliability
+                            standards. This meticulous approach guarantees that our end-to-end solutions are not only
+                            seamlessly integrated but also exemplify design excellence and operational integrity.</p>
+                        <p>Each capability is a testament to our mission of pioneering intelligent product
+                            manufacturing. By harnessing the power of GenAI across every facet—from design to
+                            delivery—we are crafting a future where smarter devices and seamless end-to-end solutions
+                            transform industries and elevate user experiences.
+                        </p>
+                        <!-- Rest of Quality Assurance content -->
+                    </div>
+                </section>
+            </div>
+            <section id="contact" class="partner-section">
+                <div class="partner-bg-shape shape1"></div>
+                <div class="partner-bg-shape shape2"></div>
+                <div class="partner-content">
+                    <div class="partner-header">
+                        <h2>Partner with CraftifAI</h2>
+                        <p>Join us in our growth journey and let's work together with our flourishing network of
+                            customers, partners & suppliers to deliver products and solutions at scale.</p>
+                        <button class="partner-button" id="partnerBtn">Partner with us</button>
+                    </div>
+                    <div class="partner-form-container" id="partnerForm">
+                        <div class="partner-form-box">
+                            <form id="contactForm">
+                                <div class="partner-form-fields">
+                                    <div class="partner-field">
+                                        <input type="text" name="name" placeholder="Full Name" required />
+                                    </div>
+                                    <div class="partner-field">
+                                        <input type="email" name="email" placeholder="Email Address" required />
+                                    </div>
+                                    <div class="partner-field">
+                                        <input type="text" name="company" placeholder="Company Name" />
+                                    </div>
+                                    <div class="partner-field">
+                                        <input type="tel" name="phone" placeholder="Phone Number" />
+                                    </div>
+                                    <div class="partner-field full">
+                                        <textarea name="message"
+                                            placeholder="Tell us about your partnership interests..." rows="5"
+                                            required></textarea>
+                                    </div>
+                                </div>
+                                <div class="partner-submit">
+                                    <button type="submit">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.3.0/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="assets/css/header.css">
+    <script>
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Sidebar navigation logic
+        const navItems = document.querySelectorAll('.nav-item');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        // Function to hide all sections and remove active class from nav items
+        function resetSections() {
+            contentSections.forEach(section => {
+                section.classList.remove('active');
+            });
+            navItems.forEach(item => {
+                item.classList.remove('active');
+            });
+        }
+
+        // Add click event to each nav item
+        navItems.forEach(item => {
+            item.addEventListener('click', function () {
+                const topic = this.getAttribute('data-topic');
+                resetSections();
+                this.classList.add('active');
+                const targetSection = document.getElementById(topic);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            });
+        });
+
+        // Check if a specific capability is requested in the URL
+        const capability = getUrlParameter('capability');
+        if (capability) {
+            resetSections();
+            const targetNavItem = document.querySelector(`.nav-item[data-topic="${capability}"]`);
+            const targetSection = document.getElementById(capability);
+            if (targetNavItem && targetSection) {
+                targetNavItem.classList.add('active');
+                targetSection.classList.add('active');
+            } else {
+                document.querySelector('.nav-item[data-topic="edge-ai"]').classList.add('active');
+                document.getElementById('edge-ai').classList.add('active');
+            }
+        } else {
+            document.querySelector('.nav-item[data-topic="edge-ai"]').classList.add('active');
+            document.getElementById('edge-ai').classList.add('active');
+        }
+    </script>
+    <script>
+        const modal = document.getElementById('imageSliderModal');
+        const sliderImg = document.getElementById('sliderImage');
+        const allImages = Array.from(document.querySelectorAll('.gallery-cell img'));
+        let currentIndex = 0;
+
+        allImages.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                currentIndex = index;
+                openSliderModal();
+            });
+        });
+
+        function openSliderModal() {
+            sliderImg.src = allImages[currentIndex].src;
+            modal.style.display = 'flex';
+            document.querySelector('header').style.display = 'none';
+            document.querySelector('.sidebar').style.display = 'none';
+        }
+
+        function closeSliderModal() {
+            modal.style.display = 'none';
+            document.querySelector('header').style.display = '';
+            document.querySelector('.sidebar').style.display = '';
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + allImages.length) % allImages.length;
+            sliderImg.src = allImages[currentIndex].src;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % allImages.length;
+            sliderImg.src = allImages[currentIndex].src;
+        }
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeSliderModal();
+            }
+        });
+    </script>
+
+
+
+</body>
+
+</html>

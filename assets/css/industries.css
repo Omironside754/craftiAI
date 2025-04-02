@@ -1,0 +1,92 @@
+/* Industries Section */
+.industries-section {
+    padding: 2rem 3rem;
+    background-color: rgb(10, 10, 65); /* Blue background for the section */
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff; /* White color, matching the theme */
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.industries-grid {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.industry-card {
+    position: relative;
+    border-radius: 10px;
+    background-color: rgba(7, 17, 46, 0.8);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.industry-card::before {
+    content: '';
+    position: absolute;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 150px); /* Cover the entire card */
+    background-color: rgba(30, 64, 175, 0.7); /* Blue overlay with transparency */
+    transition: background-color 0.5s ease, transform 0.5s ease;
+    transform: scaleX(0);  
+    transform-origin: left; /* Transition will start from the left */
+    z-index: 1; /* Behind the text but above the image */
+}
+
+.industry-card:hover::before {
+    background-color: rgba(249, 115, 22, 0.7); /* Orange overlay with transparency on hover */
+    transform: scaleX(1); /* Scale to full width (left to right) */
+}
+
+.industry-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(48, 13, 221, 0.5);
+}
+
+.industry-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    position: relative;
+    z-index: 0;
+}
+
+.industry-card h3 {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .industries-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+}

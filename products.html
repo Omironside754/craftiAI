@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products - Dark Mode Content Explorer</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/about.css">
+  <link rel="stylesheet" href="assets/css/one.css" />
+  <link rel="stylesheet" href="assets/css/partners.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/products.css" />
+  <link rel="stylesheet" href="assets/css/header.css" />
+  <link rel="stylesheet" href="assets/css/intro.css" />
+  <link rel="stylesheet" href="assets/css/industries.css" />
+  <link rel="stylesheet" href="assets/css/nav.css" /> 
+  <link rel="stylesheet" href="assets/css/Ppage.css" />
+ 
+  <style>
+    body {
+      overflow-y: auto !important; /* Allow scrolling if needed */
+    }
+    .sidebar {
+      position: relative; /* To allow absolute positioning of the button inside */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* To push the button to the bottom */
+    }
+    .redirect-button {
+      text-align: center;
+      padding: 10px;
+      position: sticky; /* Fix the button at the bottom */
+      bottom: 0; /* Stick to the bottom of the sidebar */
+      background-color: var(--nav-bg); /* Match sidebar background */
+    }
+    .back-to-contact-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4a4a4a; /* Grey color for the button */
+      color: var(--text-primary);
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color var(--transition-speed) ease;
+    }
+    .back-to-contact-btn:hover {
+      background-color: #5a5a5a; /* Slightly lighter grey on hover */
+    }
+  </style>
+</head>
+<body>
+  <!-- Header from index.html -->
+  <header id="header">
+    <picture>
+      <!-- Mobile Logo -->
+      <source srcset="images/LogoM.png" media="(max-width: 736px)" />
+      <!-- Desktop Logo -->
+      <img src="images/LogoC.png" alt="Craftifai Logo" />
+    </picture>
+    <!-- Hamburger Button for Mobile -->
+    <button class="hamburger" aria-label="Toggle Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="capabilities.html">Capabilities</a></li>
+          <li><a href="industries.html">Industries</a></li>
+          <li><a href="index.html#two">Company</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      
+  </header>
+
+  <div class="container">
+    <!-- Left Navigation Bar -->
+    <nav class="sidebar">
+      <ul class="nav-links">
+        <li class="nav-item active" data-topic="Ipg">
+          <span>Intelligent Pipeline Generator</span>
+          <div class="pointer"></div>
+        </li>
+        <li class="nav-item" data-topic="MLops">
+          <span>Intelligent Edge MLops</span>
+          <div class="pointer"></div>
+        </li>
+      </ul>
+
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="content-area">
+      <div class="content-container">
+        <header>
+          <h1 id="current-topic">Products</h1>
+        </header>
+        <section class="ipg-container content-section" id="Ipg">
+          <!-- Title & Subtitle -->
+          <div class="ipg-title">
+            <h1>
+              Intelligent 
+              <span class="highlight">Pipeline Generator</span>
+            </h1>
+            <h2>GenAI Based Development Suite</h2>
+          </div>
+      
+          <!-- Feature Boxes -->
+          <div class="ipg-features">
+            <div class="ipg-feature-box">
+              <p>Enables easier exploration, development, optimization, debugging, and deployment through push-button solutions.</p>
+            </div>
+            <div class="ipg-feature-box">
+              <p>Provide production-ready frameworks that are robust and tailored to customer needs.</p>
+            </div>
+            <div class="ipg-feature-box">
+              <p>Facilitate quick porting across silicon vendors with minimal effort.</p>
+            </div>
+            <div class="ipg-feature-box">
+              <p>Achieve cost reductions of 70-90% while improving efficiency.</p>
+            </div>
+            <div class="ipg-feature-box">
+              <p>Accelerate development timelines by 2-3x, ensuring quicker go-to-market solutions.</p>
+            </div>
+            <div class="ipg-feature-box">
+              <p>A Multi-agent GenAI workflow to automate each step of Embedded software development.</p>
+            </div>
+          </div>
+          <!-- Image Section -->
+          <div class="ipg-image">
+            <img src="images/ipgweb.png" alt="Intelligent Pipeline Generator" />
+          </div>
+        </section>
+        <section class="mlops-container content-section" id="MLops">
+          <div class="ipg-title">
+            <h1>ML<span class="highlight">ops</span></h1>
+            <h2>Empowering Smart Systems for the Real World</h2>
+          </div>
+      
+          <!-- Feature Boxes -->
+          <div class="ipg-features">
+            <div class="mlops-feature-box">
+              <p>Real-Time Decision-Making</p>
+            </div>
+            <div class="mlops-feature-box">
+              <p>Resilience to Network Failures</p>
+            </div>
+            <div class="mlops-feature-box">
+              <p>Scaling Across Thousands of Devices</p>
+            </div>
+            <div class="mlops-feature-box">
+              <p>Mitigating Data Drift</p>
+            </div>
+            <div class="mlops-feature-box">
+              <p>Protecting Privacy and Reducing Costs</p>
+            </div>
+            <div class="mlops-feature-box">
+              <p>Localized Processing for Efficiency</p>
+            </div>
+          </div>
+          <!-- Image Section -->
+          <div class="ipg-image">
+            <img src="images/mlops.png" alt="Intelligent Pipeline Generator" />
+          </div>
+        </section>
+      </div>
+      <!-- Partnership Form Section Added -->
+      <section id="contact" class="partner-section">
+        <div class="partner-bg-shape shape1"></div>
+        <div class="partner-bg-shape shape2"></div>
+        <div class="partner-content">
+          <div class="partner-header">
+            <h2>Partner with CraftifAI</h2>
+            <p>
+              Join us in our growth journey and let's work together with our flourishing network of customers, partners &amp; suppliers to deliver products and solutions at scale.
+            </p>
+            <button class="partner-button" id="partnerBtn">Partner with us</button>
+          </div>
+          <div class="partner-form-container" id="partnerForm">
+            <div class="partner-form-box">
+              <form id="contactForm">
+                <div class="partner-form-fields">
+                  <div class="partner-field">
+                    <input type="text" name="name" placeholder="Full Name" required />
+                  </div>
+                  <div class="partner-field">
+                    <input type="email" name="email" placeholder="Email Address" required />
+                  </div>
+                  <div class="partner-field">
+                    <input type="text" name="company" placeholder="Company Name" />
+                  </div>
+                  <div class="partner-field">
+                    <input type="tel" name="phone" placeholder="Phone Number" />
+                  </div>
+                  <div class="partner-field full">
+                    <textarea name="message" placeholder="Tell us about your partnership interests..." rows="5" required></textarea>
+                  </div>
+                </div>
+                <div class="partner-submit">
+                  <button type="submit">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <!-- Include contact.js to enable toggling of the partner form -->
+  <script src="assets/js/contact.js"></script>
+  <!-- Include EmailJS if needed by contact.js -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // Function to get URL parameters
+    function getUrlParameter(name) {
+      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+      var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+      var results = regex.exec(location.search);
+      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    }
+    // Sidebar navigation logic
+    const navItems = document.querySelectorAll('.nav-item');
+    const contentSections = document.querySelectorAll('.content-section');
+    // Function to hide all sections and remove active class from nav items
+    function resetSections() {
+      contentSections.forEach(section => {
+        section.classList.remove('active');
+      });
+      navItems.forEach(item => {
+        item.classList.remove('active');
+      });
+    }
+    // Add click event to each nav item
+    navItems.forEach(item => {
+      item.addEventListener('click', function() {
+        const topic = this.getAttribute('data-topic');
+        resetSections();
+        this.classList.add('active');
+        const targetSection = document.getElementById(topic);
+        if (targetSection) {
+          targetSection.classList.add('active');
+        }
+      });
+    });
+    // Check if a specific capability is requested in the URL
+    const capability = getUrlParameter('capability');
+    if (capability) {
+      resetSections();
+      const targetNavItem = document.querySelector(`.nav-item[data-topic="${capability}"]`);
+      const targetSection = document.getElementById(capability);
+      if (targetNavItem && targetSection) {
+        targetNavItem.classList.add('active');
+        targetSection.classList.add('active');
+      } else {
+        document.querySelector('.nav-item[data-topic="Ipg"]').classList.add('active');
+        document.getElementById('Ipg').classList.add('active');
+      }
+    } else {
+      document.querySelector('.nav-item[data-topic="Ipg"]').classList.add('active');
+      document.getElementById('Ipg').classList.add('active');
+    }
+  </script>
+</body>
+</html>

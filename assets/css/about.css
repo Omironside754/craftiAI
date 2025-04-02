@@ -1,0 +1,63 @@
+/* General styling for the About section */
+#two {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Background Canvas */
+#two canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: transparent;
+}
+
+/* Custom styling for about-content */
+.about-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto; /* Center the content */
+    padding: 20px; /* Optional padding for better spacing */
+    opacity: 1; /* Ensure no initial fade-in from main.css */
+    transform: translateX(0); /* Override any default transform */
+    transition: none; /* Remove default transition from main.css */
+}
+
+/* Title Styling */
+#two h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+/* Paragraph Styling */
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1em; /* Consistent spacing */
+}
+
+/* Optional: Ensure no unwanted animations */
+.about-content * {
+    transition: none !important; /* Prevent any inherited transitions */
+}

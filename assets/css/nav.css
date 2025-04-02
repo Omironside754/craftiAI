@@ -1,0 +1,275 @@
+/* Base Styles */
+:root {
+    --bg-color: #000000;
+    --nav-bg: #141b41;
+    --content-bg: #141b41;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --accent-color: #4d4dff;
+    --hover-color: #6c6cff;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Navigation Sidebar */
+.sidebar {
+    width: 20vw;
+    min-width: 200px;
+    padding: 2rem 0;
+    height: 100vh;
+    position: relative;
+    background-color: var(--nav-bg);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.nav-item {
+    position: relative;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-item span {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    transition: all var(--transition-speed) ease;
+    margin-left: 1rem;
+}
+
+.nav-item:hover span {
+    color: var(--text-primary);
+}
+
+.nav-item.active span {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.pointer {
+    position: absolute;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid var(--content-bg);
+    opacity: 0;
+    transition: all var(--transition-speed) ease;
+}
+
+.nav-item.active .pointer {
+    opacity: 1;
+}
+
+/* Content Area */
+.content-area {
+    flex: 1;
+    width: 80vw;
+    height: 100vh;
+    overflow: auto;
+    padding: 5vh 5vw;
+    background-color: var(--bg-color); /* Added to match capabilities.html */
+}
+
+.content-container {
+    background-color: var(--content-bg);
+    min-height: 90vh;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.content-section {
+    padding: 2rem 3rem;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+   
+}
+
+.content-section.active {
+    display: block;
+    opacity: 1;
+}
+
+.content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.content-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.content-section h3 {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.content-section p {
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.content-section ul {
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    padding-left: 2rem;
+}
+
+.content-section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Product-specific Styles */
+.product-content {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.product-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Header Styles for "Products" Title */
+header {
+    padding: 1rem 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+   
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--content-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100vw;
+        height: auto;
+        padding: 1rem 0;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 0;
+    }
+    
+    .nav-item {
+        margin-bottom: 0.5rem;
+    }
+    
+    .nav-item span {
+        font-size: 1rem;
+        margin-left: 0.5rem;
+    }
+    
+    .pointer {
+        display: none;
+    }
+    
+    .content-area {
+        width: 100vw;
+        background: none;
+        padding: 0;
+    }
+}
+
+/* At the end of nav.css */
+body {
+    overflow-y: auto !important;
+}
+
+.redirect-button {
+    text-align: center;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.back-to-contact-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.back-to-contact-btn:hover {
+    background-color: var(--hover-color);
+}

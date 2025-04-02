@@ -1,0 +1,186 @@
+  /* Flickity carousel container */
+  /* Carousel container */
+/* Carousel container */
+body {
+  background-color: #1e1e1e; /* Dark background */
+  color: #ffffff;           /* White text */
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+.gallery {
+  background: transparent;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Carousel cells */
+.gallery-cell {
+  width: 100% !important;
+  aspect-ratio: 16 / 9;  /* Responsive & keeps ratio */
+  margin-right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #111;
+  position: relative;
+}
+
+/* Images inside carousel */
+.gallery-cell img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Carousel text */
+.gallery-cell h3 {
+  margin-top: 10px;
+  color: white;
+  font-size: 18px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .gallery-cell {
+      aspect-ratio: 4 / 3;
+  }
+  .gallery-cell h3 {
+      font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .gallery {
+      max-width: 100%; /* Full width */
+      padding: 0 10px;
+  }
+  .gallery-cell {
+      aspect-ratio: 1 / 1;  /* Square on very small screens */
+  }
+  .gallery-cell h3 {
+      font-size: 14px;
+  }
+}
+
+
+
+  /* Modal styling */
+ /* Image Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  align-items: center;
+  justify-content: center;
+}
+
+/* The Modal Image */
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.close:hover {
+  color: #bbb;
+}
+
+/* Fullscreen slider modal */
+.slider-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Close button */
+.slider-modal .close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.slider-modal .slider-content {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+#sliderImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  max-height: 80vh;
+}
+
+/* Arrows */
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10000;
+}
+
+.slider-nav.left {
+  left: -60px;
+}
+
+.slider-nav.right {
+  right: -60px;
+}
+
+@media (max-width: 768px) {
+  .slider-nav.left {
+      left: 10px;
+  }
+  .slider-nav.right {
+      right: 10px;
+  }
+}

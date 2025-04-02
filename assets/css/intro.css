@@ -1,0 +1,29 @@
+	/* Intro */
+	@keyframes zoomInBackground {
+	    0% {
+	        background-size: 256px 256px, 110% auto;
+	    }
+
+	    100% {
+	        background-size: 256px 256px, cover;
+	    }
+	}
+
+	#intro {
+	    background: url("images/overlay.png"), url("../../images/edgecam.png");
+	    background-size: 256px 256px, cover;
+	    background-attachment: fixed, fixed;
+	    background-position: top left, bottom center;
+	    background-repeat: repeat, no-repeat;
+	    animation: zoomInBackground 3s ease-out ease-in forwards;
+	}
+
+	@keyframes fade {
+	    from {
+	        opacity: 0;
+	    }
+
+	    to {
+	        opacity: 1;
+	    }
+	}

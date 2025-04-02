@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #1e1e1e; /* Dark background */
+  color: #ffffff;           /* White text */
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Container to center and limit overall width */
+.ipg-container {
+  max-width: 100%;
+  margin: auto;
+  padding: 0 1rem; /* Add horizontal padding for smaller screens */
+}
+.mlops-container {
+  max-width: 100%;
+  margin: auto;
+  padding: 0 1rem; /* Add horizontal padding for smaller screens */
+}
+
+/* Title Section */
+.ipg-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.ipg-title h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+.ipg-title .highlight {
+  color: #0052cc; 
+  font-weight: 600;
+}
+.ipg-title h2 {
+  font-size: 1.5rem;
+  color: #0052cc;
+  font-weight: 400;
+}
+
+/* Feature Boxes Section */
+.ipg-features {
+  display: flex;
+  flex-wrap: wrap;      /* Wrap to next line for smaller screens */
+  gap: 1rem;            /* Space between boxes */
+  justify-content: space-between;
+}
+.ipg-feature-box {
+  flex: 1 1 calc(33.333% - 1rem); /* 3 boxes per row on wide screens */
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  min-height: 140px;   /* Ensures uniform box height */
+  display: flex;
+  align-items: center;
+  justify-content: center;  /* Centers horizontally */
+  text-align: center;
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+.mlops-feature-box {
+  flex: 1 1 calc(33.333% - 1rem); /* 3 boxes per row on wide screens */
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;      /* Centers vertically */
+  justify-content: center;  /* Centers horizontally */
+  text-align: center;
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.mlops-feature-box:hover {
+  transform: translateY(-5px); /* Move up slightly on hover */
+}
+.mlops-feature-box p {
+  margin: 0;           /* Remove default p margin */
+  font-size: 1rem;
+}
+.ipg-feature-box:hover {
+  transform: translateY(-5px); /* Move up slightly on hover */
+}
+.ipg-feature-box p {
+  margin: 0;           /* Remove default p margin */
+  font-size: 1rem;
+}
+
+.ipg-image {
+  text-align: center;
+  width: calc(100% + 2rem);
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.ipg-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Mobile view adjustments: crop image from right and left */
+@media (max-width: 480px) {
+  .ipg-image {
+    overflow: hidden; /* Hide the extra parts of the image */
+  }
+  .ipg-image img {
+    width: 120%;    /* Increase image width to zoom in */
+    
+  }
+}
+
+
+
+/* Responsive adjustments for tablets and small screens */
+@media (max-width: 768px) {
+  .ipg-feature-box {
+    flex: 1 1 100%; /* Each box takes full width */
+  }
+  .mlops-feature-box {
+    flex: 1 1 100%; /* Each box takes full width */
+  }
+  .ipg-title h1 {
+    font-size: 2.5rem;
+  }
+  .ipg-title h2 {
+    font-size: 1.25rem;
+  }
+}
+
+/* Additional adjustments for very small screens */
+@media (max-width: 480px) {
+
+  .ipg-title h1 {
+    font-size: 2rem;
+  }
+  .ipg-title h2 {
+    font-size: 1rem;
+  }
+}

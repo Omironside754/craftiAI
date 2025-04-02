@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Industries - Dark Mode Content Explorer</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/about.css">
+		<link rel="stylesheet" href="assets/css/one.css" />
+		<link rel="stylesheet" href="assets/css/partners.css" />
+		<link rel="stylesheet" href="assets/css/footer.css" />
+		<link rel="stylesheet" href="assets/css/products.css" />
+		<link rel="stylesheet" href="assets/css/header.css" />
+		<link rel="stylesheet" href="assets/css/intro.css" />
+		<link rel="stylesheet" href="assets/css/industries.css" />
+		<link rel="stylesheet" href="assets/css/nav.css" /> 
+    <!-- Add some basic CSS for the button -->
+    <style>
+        /* Ensure body allows overflow for button visibility */
+        body {
+            overflow-y: auto !important;
+            /* Allow scrolling if needed */
+            background-color: #1e1e1e;
+            /* Dark background */
+            color: #ffffff;
+            /* White text */
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+
+        .sidebar {
+            position: relative;
+            /* To allow absolute positioning of the button inside */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* To push the button to the bottom */
+        }
+
+        .redirect-button {
+            text-align: center;
+            padding: 10px;
+            position: sticky;
+            /* Fix the button at the bottom */
+            bottom: 0;
+            /* Stick to the bottom of the sidebar */
+            background-color: var(--nav-bg);
+            /* Match sidebar background */
+        }
+
+        .back-to-contact-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4a4a4a;
+            /* Grey color for the button */
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color var(--transition-speed) ease;
+        }
+
+        .back-to-contact-btn:hover {
+            background-color: #5a5a5a;
+            /* Slightly lighter grey on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header from index.html -->
+    <header id="header">
+        <picture>
+            <!-- Mobile Logo -->
+            <source srcset="images/LogoM.png" media="(max-width: 736px)" />
+            <!-- Desktop Logo -->
+            <img src="images/LogoC.png" alt="Craftifai Logo" />
+        </picture>
+
+        <!-- Hamburger Button for Mobile -->
+        <button class="hamburger" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Updated Navigation Menu -->
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="capabilities.html">Capabilities</a></li>
+                <li><a href="industries.html">Industries</a></li>
+                <li><a href="index.html#two">Company</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="container">
+        <!-- Left Navigation Bar -->
+        <nav class="sidebar">
+            <ul class="nav-links">
+                <li class="nav-item active" data-topic="consumer-electronics">
+                    <span>Consumer Electronics &amp; IoT Devices</span>
+                    <div class="pointer"></div>
+                </li>
+                <li class="nav-item" data-topic="security-surveillance">
+                    <span>Security &amp; Surveillance</span>
+                    <div class="pointer"></div>
+                </li>
+                <li class="nav-item" data-topic="energy-utilities">
+                    <span>Energy &amp; Utilities</span>
+                    <div class="pointer"></div>
+                </li>
+                <li class="nav-item" data-topic="industrial">
+                    <span>Industrial</span>
+                    <div class="pointer"></div>
+                </li>
+                <li class="nav-item" data-topic="robotics">
+                    <span>Robotics</span>
+                    <div class="pointer"></div>
+                </li>
+                <li class="nav-item" data-topic="aerospace-defense">
+                    <span>Aerospace &amp; Defense</span>
+                    <div class="pointer"></div>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            <div class="content-container">
+                <header>
+                    <h1 id="current-topic">Industries</h1>
+                </header>
+
+                <!-- Content sections for each industry -->
+                <section class="content-section" id="consumer-electronics">
+                    <div class="content-wrapper">
+                        <h2>Consumer Electronics &amp; IoT Devices</h2>
+                        <p>Empowering the Connected World</p>
+                        <p>In the dynamic realm of consumer electronics and IoT, innovation is the key to unlocking
+                            smarter, more connected lifestyles. Leveraging GenAI-powered efficiency and design
+                            excellence, we craft state-of-the-art devices that blend functionality with aesthetic
+                            appeal. Our intelligent manufacturing processes ensure every sensor, microchip, and smart
+                            component is produced to the highest standards, enabling seamless connectivity and
+                            interoperability. With our end-to-end solutions, brands can deliver personalized, agile, and
+                            high-performance electronics that shape the future of digital living.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="content-section" id="security-surveillance">
+                    <div class="content-wrapper">
+                        <h2>Security &amp; Surveillance</h2>
+                        <p>Redefining Safety with Intelligent Solutions</p>
+                        <p>Safety and vigilance are more critical than ever in today’s fast-evolving landscape. Our
+                            GenAI-driven manufacturing harnesses cutting-edge technology to produce advanced security
+                            and surveillance systems. Through precision engineering and smart design, we deliver devices
+                            that offer enhanced monitoring, rapid threat detection, and robust protection. Our seamless
+                            end-to-end solutions integrate hardware and software to ensure that every product not only
+                            meets but exceeds industry standards, offering peace of mind and reliable security in every
+                            environment.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="content-section" id="energy-utilities">
+                    <div class="content-wrapper">
+                        <h2>Energy &amp; Utilities</h2>
+                        <p>Innovative Solutions for a Sustainable Future</p>
+                        <p>The energy and utilities sector is evolving rapidly, driven by the need for efficiency and
+                            sustainability. Our GenAI-powered manufacturing processes are at the forefront of this
+                            transformation, enabling the production of smart, reliable, and energy-efficient products.
+                            We focus on integrating innovative design with precision manufacturing to create components
+                            and systems that optimize energy use and enhance grid reliability. By offering seamless
+                            end-to-end solutions, we empower utilities and energy providers to meet growing demand with
+                            products that support a greener, more sustainable future.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="content-section" id="industrial">
+                    <div class="content-wrapper">
+                        <h2>Industrial</h2>
+                        <p>Smart Manufacturing for a New Era of Industry</p>
+                        <p>Efficiency, reliability, and innovation are the cornerstones of modern industrial production.
+                            Our GenAI-powered manufacturing platform reimagines industrial product development by
+                            optimizing every phase—from design to production. We produce high-performance, durable
+                            equipment that meets the rigorous demands of today’s industrial landscape. By integrating
+                            advanced data analytics and real-time quality control, our intelligent solutions streamline
+                            operations, reduce downtime, and enable scalable production—helping industries drive
+                            productivity and sustain competitive advantage.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="content-section" id="robotics">
+                    <div class="content-wrapper">
+                        <h2>Robotics</h2>
+                        <p>Crafting the Future of Automation</p>
+                        <p>The robotics industry thrives on precision, adaptability, and groundbreaking innovation. With
+                            our GenAI-enhanced manufacturing processes, we create robotic systems that embody these
+                            values. Our focus on design excellence ensures that every robot is engineered for optimal
+                            performance, whether it’s for manufacturing automation, service robotics, or specialized
+                            applications. By seamlessly integrating intelligent controls with robust hardware, we
+                            deliver end-to-end solutions that push the boundaries of automation and transform how
+                            industries operate.</p>
+                    </div>
+                </section>
+
+                <section class="content-section" id="aerospace-defense">
+                    <div class="content-wrapper">
+                        <h2>Aerospace &amp; Defense</h2>
+                        <p>Precision Engineering for High-Stakes Environments</p>
+                        <p>In the aerospace and defence sectors, the margin for error is virtually nonexistent. Our
+                            pioneering approach to intelligent product manufacturing delivers the rigorous standards
+                            required by these high-stakes industries. Utilizing GenAI-powered processes, we produce
+                            components and systems with unparalleled precision and reliability. Our design excellence
+                            ensures that every product—from advanced avionics to critical defence systems—meets
+                            stringent regulatory and performance criteria, while our seamless integration capabilities
+                            provide comprehensive, end-to-end solutions for mission-critical applications.
+                        </p>
+                    </div>
+                </section>
+            </div>
+            <!-- Partnership Form Section Added -->
+            <section id="contact" class="partner-section">
+                <div class="partner-bg-shape shape1"></div>
+                <div class="partner-bg-shape shape2"></div>
+                <div class="partner-content">
+                    <div class="partner-header">
+                        <h2>Partner with CraftifAI</h2>
+                        <p>
+                            Join us in our growth journey and let's work together with our flourishing network of
+                            customers, partners &amp; suppliers to deliver products and solutions at scale.
+                        </p>
+                        <button class="partner-button" id="partnerBtn">Partner with us</button>
+                    </div>
+                    <div class="partner-form-container" id="partnerForm">
+                        <div class="partner-form-box">
+                            <form id="contactForm">
+                                <div class="partner-form-fields">
+                                    <div class="partner-field">
+                                        <input type="text" name="name" placeholder="Full Name" required />
+                                    </div>
+                                    <div class="partner-field">
+                                        <input type="email" name="email" placeholder="Email Address" required />
+                                    </div>
+                                    <div class="partner-field">
+                                        <input type="text" name="company" placeholder="Company Name" />
+                                    </div>
+                                    <div class="partner-field">
+                                        <input type="tel" name="phone" placeholder="Phone Number" />
+                                    </div>
+                                    <div class="partner-field full">
+                                        <textarea name="message"
+                                            placeholder="Tell us about your partnership interests..." rows="5"
+                                            required></textarea>
+                                    </div>
+                                </div>
+                                <div class="partner-submit">
+                                    <button type="submit">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script src="assets/js/contact.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <script>
+        // Function to get URL parameters
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Sidebar navigation logic
+        const navItems = document.querySelectorAll('.nav-item');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        // Function to hide all sections and remove active class from nav items
+        function resetSections() {
+            contentSections.forEach(section => {
+                section.classList.remove('active');
+            });
+            navItems.forEach(item => {
+                item.classList.remove('active');
+            });
+        }
+
+        // Add click event to each nav item
+        navItems.forEach(item => {
+            item.addEventListener('click', function () {
+                const topic = this.getAttribute('data-topic');
+                resetSections();
+                this.classList.add('active');
+                const targetSection = document.getElementById(topic);
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+            });
+        });
+
+        // Check if a specific industry is requested in the URL
+        const industry = getUrlParameter('industry');
+        if (industry) {
+            resetSections();
+            const targetNavItem = document.querySelector(`.nav-item[data-topic="${industry}"]`);
+            const targetSection = document.getElementById(industry);
+            if (targetNavItem && targetSection) {
+                targetNavItem.classList.add('active');
+                targetSection.classList.add('active');
+            } else {
+                document.querySelector('.nav-item[data-topic="consumer-electronics"]').classList.add('active');
+                document.getElementById('consumer-electronics').classList.add('active');
+            }
+        } else {
+            document.querySelector('.nav-item[data-topic="consumer-electronics"]').classList.add('active');
+            document.getElementById('consumer-electronics').classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
