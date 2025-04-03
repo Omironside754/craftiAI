@@ -1,6 +1,6 @@
 /* Base Styles */
 :root {
-    --bg-color: #000000;
+    --bg-color: rgba(1, 7, 13, 0.8);
     --nav-bg: #141b41;
     --content-bg: #141b41;
     --text-primary: #ffffff;
@@ -118,11 +118,10 @@ body {
 }
 
 .content-section {
-    padding: 2rem 3rem;
+    padding: 2rem 2rem;
     display: none;
     opacity: 0;
-    transition: opacity 0.5s ease;
-   
+    transition: opacity 0.5s ease;  
 }
 
 .content-section.active {
@@ -191,6 +190,21 @@ header h1 {
     color: var(--text-primary);
 }
 
+.content-section-image {
+    text-align: center;
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
+    margin-right: -1rem;
+    margin-bottom: -3rem;
+  }
+  
+  .content-section-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
 /* Scrollbar Styles */
 ::-webkit-scrollbar {
     width: 6px;
@@ -214,44 +228,72 @@ header h1 {
     .container {
         flex-direction: column;
     }
-    
+
     #current-topic {
         display: none; 
     }
-    
+
     .sidebar {
-        display: none !important;;
+        display: none !important;
         width: 100vw;
         height: auto;
         padding: 1rem 0;
     }
-    
+
     .nav-links {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         margin-top: 0;
     }
-    
+
     .nav-item {
         margin-bottom: 0.5rem;
     }
-    
+
     .nav-item span {
         font-size: 1rem;
         margin-left: 0.5rem;
     }
-    
+
     .pointer {
         display: none;
     }
-    
+
     .content-area {
         width: 100vw;
         background: none;
-        padding: 0;
+        text-align: center;
+        padding: 0; /* Keep */
+    }
+    .content-section-image {
+        text-align: center;
+        width: calc(100% + 2rem);
+        margin-left: -1rem;
+        margin-right: -1rem;
+      }
+      
+      .content-section-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+    .content-container {
+        padding: 0 1rem; /* ✅ Add horizontal padding */
+        box-sizing: border-box;
+    }
+
+    .content-section {
+        padding: 1.5rem 0; /* ✅ Remove horizontal padding from here */
+    }
+
+    header {
+        padding: 1rem 1rem; /* ✅ Match header padding to content */
     }
 }
+
 
 /* At the end of nav.css */
 body {

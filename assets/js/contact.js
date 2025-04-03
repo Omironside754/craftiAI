@@ -19,31 +19,42 @@ if (partnerBtn && partnerForm) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    // EmailJS initialization
-    emailjs.init('s-Hg6UjWEuKRlaghs');
+  // EmailJS initialization
+  emailjs.init('s-Hg6UjWEuKRlaghs');
 
-    // Form submission logic
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-        e.preventDefault(); 
+  const submitBtn = document.querySelector('#contactForm button[type="submit"]');
 
-        
-        const formData = {
-            name: this.name.value,
-            email: this.email.value,
-            company: this.company.value || 'Not provided',
-            phone: this.phone.value || 'Not provided',
-            message: this.message.value,
-        };
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
 
-        
-        emailjs.send('service_96x8b1o', 'template_3ixel5d', formData)
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-                alert('Your message has been sent successfully!');
-                this.reset(); 
-            }, (error) => {
-                console.log('FAILED...', error);
-                alert('Failed to send message. Please try again.');
-            });
-    });
+      const formData = {
+          name: this.name.value,
+          email: this.email.value,
+          company: this.company.value || 'Not provided',
+          phone: this.phone.value || 'Not provided',
+          message: this.message.value,
+      };
+
+      emailjs.send('service_96x8b1o', 'template_3ixel5d', formData)
+          .then((response) => {
+              submitBtn.textContent = 'Message Sent';
+              submitBtn.disabled = true;
+
+              this.reset();
+
+              // Reset after 3 seconds
+              setTimeout(() => {
+                  submitBtn.textContent = 'Send Message';
+                  submitBtn.disabled = false;
+              }, 3000);
+          }, (error) => {
+              submitBtn.textContent = 'Failed! Retry';
+              submitBtn.disabled = true;
+
+              setTimeout(() => {
+                  submitBtn.textContent = 'Send Message';
+                  submitBtn.disabled = false;
+              }, 3000);
+          });
+  });
 });

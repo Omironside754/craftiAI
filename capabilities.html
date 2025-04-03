@@ -79,22 +79,49 @@
             <span></span>
         </button>
         <nav class="nav-menu desktop-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="capabilities.html">Capabilities</a></li>
-                <li><a href="industries.html">Industries</a></li>
-                <li><a href="index.html#two">Company</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+			<ul>
+				<li class="has-submenu">
+					<a href="industries.html">Industries</a>
+					<ul class="sub-menu">
+						<li><a href="industries.html#consumer-electronics">Consumer Electronics & IoT Devices</a></li>
+						<li><a href="industries.html#security-surveillance">Security & Surveillance</a></li>
+						<li><a href="industries.html#energy-utilities">Energy & Utilities</a></li>
+						<li><a href="industries.html#industrial">Industrial</a></li>
+						<li><a href="industries.html#robotics">Robotics</a></li>
+						<li><a href="industries.html#aerospace-defense">Aerospace & Defense</a></li>
+					</ul>
+				</li>
+				<li class="has-submenu">
+					<a href="capabilities.html">Capabilities</a>
+					<ul class="sub-menu">
+						<li><a href="capabilities.html#edge-ai">Edge AI Solutions</a></li>
+						<li><a href="capabilities.html#product-design">Product Design & Engineering</a></li>
+						<li><a href="capabilities.html#embedded-system">Embedded System Design</a></li>
+						<li><a href="capabilities.html#fpga-design">FPGA Design</a></li>
+						<li><a href="capabilities.html#manufacturing">Manufacturing and Assembly</a></li>
+						<li><a href="capabilities.html#inventory">Managed Inventory and Logistics</a></li>
+						<li><a href="capabilities.html#quality-assurance">System Integration & Quality Assurance</a></li>
+					</ul>
+				</li>
+				<li class="has-submenu">
+					<a href="products.html">Products</a>
+					<ul class="sub-menu">
+						<li><a href="products.html#ipg">Intelligent Pipeline Generator</a></li>
+						<li><a href="products.html#mlops">Intelligent Edge MLops</a></li>
+					</ul>
+				</li>
+				<li><a href="index.html#two">Company</a></li>
+				<li><a href="#contact">Contact Us</a></li>
+			</ul>
+		</nav>
+		
     </header>
 
     <nav class="mobile-nav">
         <ul class="main-menu">
             <li><a href="index.html">Home</a></li>
             <li class="has-submenu">
-                <a href="capabilities.html">Capabilities</a>
+                <a>Capabilities</a>
                 <span class="submenu-arrow">&#9660;</span>
                 <ul class="sub-menu">
                     <li><a href="capabilities.html#edge-ai">Edge AI Solutions</a></li>
@@ -107,7 +134,7 @@
                 </ul>
             </li>
             <li class="has-submenu">
-                <a href="industries.html">Industries</a>
+                <a>Industries</a>
                 <span class="submenu-arrow">&#9660;</span>
                 <ul class="sub-menu">
                     <li><a href="industries.html#consumer-electronics">Consumer Electronics & IoT Devices</a></li>
@@ -274,9 +301,12 @@
                             production—is optimized to deliver smarter, reliable, and user-centric solutions that
                             redefine industry standards.
                         </p>
-                        <img src="images/fulls/Product design and engineering.png" alt="Product Design" class="product-design-image">
+                        <div class="content-section-image">
+                            <img src="images/fulls/Product design and engineering.png" alt="Product Design">
+                        </div>
                     </div>
                 </section>
+                
 
                 <section class="content-section" id="embedded-system">
                     <div class="content-wrapper">
@@ -290,7 +320,9 @@
                             operate with precision and efficiency, embodying our commitment to pioneering intelligent
                             product manufacturing.
                         </p>
+                        <div class="content-section-image">
                         <img src="images/fulls/Embedded systems design 1.png" alt="embedded system design" class="product-design-image">
+                    </div>
                     </div>
                 </section>
 
@@ -305,8 +337,9 @@
                             that meets the specific demands of advanced applications—from data centers to smart
                             devices—while ensuring that every solution is both innovative and seamlessly integrated into
                             your product ecosystem.</p>
+                            <div class="content-section-image">
                         <img src="images/fulls/fpga.png" alt="FPGA" class="product-design-image">
-
+                    </div>
                     </div>
                 </section>
 
@@ -324,7 +357,9 @@
                             not only meets the highest quality standards but also embodies our commitment to delivering
                             seamless, end-to-end solutions.
                         </p>
+                        <div class="content-section-image">
                         <img src="images/fulls/manufacturing1.png" alt="Manufacturing and assembly" class="product-design-image">
+                        </div>
                     </div>
                 </section>
 
@@ -339,7 +374,9 @@
                             efficiency. By integrating these capabilities with our manufacturing processes, we provide a
                             seamless supply chain that supports the rapid delivery of smarter, innovative devices to
                             market.</p>
-                        <img src="images/fulls/Inventory.png" alt="Managed Inventory and Logistics" class="product-design-image">   
+                            <div class="content-section-image">
+                        <img src="images/fulls/Inventory.png" alt="Managed Inventory and Logistics" class="product-design-image">  
+                            </div> 
                     </div>
                 </section>
 
@@ -359,10 +396,67 @@
                             delivery—we are crafting a future where smarter devices and seamless end-to-end solutions
                             transform industries and elevate user experiences.
                         </p>
+                        <div class="content-section-image">
                         <img src="images/fulls/QA.png" alt="Managed Inventory and Logistics" class="product-design-image">  
+                        </div>
                     </div>
                 </section>
             </div>
+            <section class="other-capabilities-section">
+                <h2 class="other-capabilities-heading">Other Capabilities</h2>
+                <div class="other-capabilities-carousel js-flickity" data-flickity='{ "wrapAround": true, "pageDots": false, "autoPlay": 3000 }'>
+            
+                    <!-- Capability Card -->
+                    <div class="capability-card">
+                        <a href="#edge-ai">
+                            <h3>Edge AI Solutions</h3>
+                            <p>Empowering Devices with Intelligent Decentralization</p>
+                        </a>
+                    </div>
+                    
+                    <div class="capability-card">
+                        <a href="#product-design">
+                            <h3>Product Design & Engineering</h3>
+                            <p>Innovating Tomorrow’s Products Today</p>
+                        </a>
+                    </div>
+                    
+                    <div class="capability-card">
+                        <a href="#embedded-system">
+                            <h3>Embedded System Design</h3>
+                            <p>Seamless Integration of Intelligence into Every Device</p>
+                        </a>
+                    </div>
+                    
+                    <div class="capability-card">
+                        <a href="#fpga-design">
+                            <h3>FPGA Design</h3>
+                            <p>Accelerating Performance with Custom Hardware Solutions</p>
+                        </a>
+                    </div>
+                    
+                    <div class="capability-card">
+                        <a href="#manufacturing">
+                            <h3>Manufacturing and Assembly</h3>
+                            <p>Precision Production for Superior Quality</p>
+                        </a>
+                    </div>
+                    
+                    <div class="capability-card">
+                        <a href="#inventory">
+                            <h3>Managed Inventory and Logistics</h3>
+                            <p>Optimizing Supply Chains with Intelligent Oversight</p>
+                        </a>
+                    </div>
+                    
+                    <div class="capability-card">
+                        <a href="#quality-assurance">
+                            <h3>System Integration & Quality Assurance</h3>
+                            <p>Ensuring Cohesion and Excellence at Every Stage</p>
+                        </a>
+                    </div>                    
+                </div>
+            </section>
             <section id="contact" class="partner-section">
                 <div class="partner-bg-shape shape1"></div>
                 <div class="partner-bg-shape shape2"></div>

@@ -8,13 +8,14 @@
     top: 0;
     left: 0;
     width: 100%;
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
     background: rgba(255, 253, 253, 0.95);
     height: 3em;
     line-height: 3em;
     box-shadow: 0 0 0.15em rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
+    font-weight: 700;
     justify-content: space-between;
     padding: 0 1em;
   }
@@ -59,6 +60,51 @@
   .desktop-nav ul li a:hover {
     color: #534dcf;
   }
+
+  /* Desktop Dropdown */
+.desktop-nav .has-submenu {
+    position: relative;
+}
+
+.desktop-nav .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(255, 253, 253, 0.95);
+    ;
+    padding: 0.5em 0;
+    list-style: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5em;
+    display: none;
+    min-width: 220px;
+    z-index: 999;
+}
+
+.desktop-nav .sub-menu li a {
+    display: block;
+    padding: 0.5em 1em;
+    white-space: nowrap;
+    color: #353434;
+    font-size: 0.9em;
+    transition: background 0.3s;
+}
+
+.desktop-nav .sub-menu li {
+  display: block;  /* IMPORTANT */
+  width: 100%;     /* prevent inline-block side by side */
+}
+
+
+.desktop-nav .sub-menu li a:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+/* Show submenu on hover */
+.desktop-nav .has-submenu:hover > .sub-menu {
+    display: block;
+}
+
   
   /* Hamburger (hidden on desktop) */
   .hamburger {
@@ -106,21 +152,24 @@
   
     /* MOBILE NAV:
        Slides down from above when .active is toggled */
-    .mobile-nav {
-      position: fixed;
-      display: block;
-      top: 3em;       /* Just below the header */
-      left: 50%;      /* Center horizontally */
-      width: 300px;   /* Adjust for your design */
-      background: #fdf9f3;
-      border-radius: 1rem;
-      padding: 1rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  
-      transform: translate(-50%, -200%);
-      transition: transform 0.3s ease, visibility 0.3s ease;
-      z-index: 9999;
-      visibility: hidden; /* Not clickable when hidden */
+       .mobile-nav {
+        position: fixed;
+        display: block;
+        top: 3em;
+        left: 50%;
+        width: 300px;
+        background: rgba(255, 253, 253, 0.95);       ;
+        border-radius: 1rem;
+        padding: 1rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transform: translate(-50%, -200%);
+        transition: transform 0.3s ease, visibility 0.3s ease;
+        z-index: 9999;
+        visibility: hidden;
+        
+        /* ADD THIS */
+        max-height: calc(100vh - 3em);
+        overflow-y: auto;
     }
     .mobile-nav.active {
       transform: translate(-50%, 0);
@@ -157,15 +206,16 @@
   
     /* Submenu arrow on the right */
     .mobile-nav .submenu-arrow {
-        position: absolute;
-        right: 1rem;
-        top: 50%;
-        margin-top: -0.6rem; /* Half of font-size to center it */
-        cursor: pointer;
-        font-size: 1.2rem;
-        color: #353434;
-        transition: transform 0.3s ease;
-    }
+      position: absolute;
+      right: 1rem;
+      top: 1.2rem;  /* instead of 50% */
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 1rem;
+      color: #353434;
+      transition: transform 0.3s ease;
+  }
+  
     
     /* Rotate arrow if .open is toggled on parent li */
     .mobile-nav .has-submenu.open .submenu-arrow {
@@ -177,7 +227,7 @@
     .mobile-nav .sub-menu {
       list-style: none;
       margin: 0;
-      padding: 0 1rem;
+      padding: 0 0.5rem;
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s ease;
@@ -189,6 +239,8 @@
     .mobile-nav .sub-menu li {
       padding: 0.5rem 0;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      word-break: break-word; 
+      object-fit: cover;
     }
     .mobile-nav .sub-menu li:last-child {
       border-bottom: none;
@@ -196,7 +248,7 @@
     .mobile-nav .sub-menu li a {
       color: #333;
       white-space: nowrap;
-      font-size: 1.1rem;
+      font-size: 0.9rem;
     }
   
     /* Staggered fade-down animation */

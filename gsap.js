@@ -6,19 +6,22 @@ const cards = document.querySelectorAll('.content.box.style2');
 
 if (cards.length > 0) {
   if (window.innerWidth <= 768) {
+    // Set mobile initial positions offscreen bottom-right
     gsap.set(cards, {
-      x: "150vw",
-      y: "50vh",
+      x: "120vw",
+      y: "120vh",
       opacity: 0,
       scale: 0.9,
+      transformOrigin: "center center"
     });
   }
+  
   else {
     gsap.set(cards, {
       x: "50vw",
       y: "50vh",
       opacity: 0,
-      rotation: 0,
+      //rotation: 20,
       scale: 0.9,
     });
   }
@@ -56,13 +59,14 @@ if (cards.length > 0) {
       if (window.innerWidth <= 768) {
         gsap.to(card, {
           y: gsap.utils.interpolate("120vh", "0px", progress),
-          x: gsap.utils.interpolate("20vw", 140, progress),
+          x: gsap.utils.interpolate("120vw", "20vh", progress), // Change from "20vw" or "140px" to "50%"
           opacity: 1,
           scale: gsap.utils.interpolate(0.9, 1, progress),
-          rotation: gsap.utils.interpolate(0, 0, progress),
           zIndex: index,
           ease: "power4.out",
           duration: 0.5,
+          // Add the following to center the card
+          xPercent: -70 // This shifts it back by 50% of its own width to center it
         });
       }
       else {
@@ -71,7 +75,7 @@ if (cards.length > 0) {
           x: gsap.utils.interpolate(baseXStart, index * baseXIncrement, progress),
           opacity: 1,
           scale: gsap.utils.interpolate(0.9, 1, progress),
-          rotation: gsap.utils.interpolate(0, 0, progress),
+          rotation: gsap.utils.interpolate(20, 0, progress),
           zIndex: index,
           ease: "power4.out",
           duration: 0.5,
@@ -119,7 +123,7 @@ if (cards.length > 0) {
   window.addEventListener('beforeunload', () => {
     gsap.set(cards, {
       x: "120vw",
-      y: "50vh",
+      y: "120vh",
       opacity: 0,
       scale: 0.9,
       rotation: 20,
@@ -152,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function () {
     card.addEventListener('click', function () {
       const cardId = this.id;
       if (cardMappings[cardId]) {
-        window.location.href = 'capabilities.html?capability=' + cardMappings[cardId];
+        window.location.href = `capabilities.html#${cardMappings[cardId]}`; 
       }
     });
 
@@ -166,7 +170,7 @@ document.querySelectorAll('.industry-card').forEach(card => {
   card.addEventListener('click', function () {
     const industryId = this.getAttribute('data-industry');
     if (industryId) {
-      window.location.href = `industries.html?industry=${industryId}`;
+      window.location.href = `industries.html#${industryId}`; 
     }
   });
 

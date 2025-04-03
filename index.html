@@ -35,22 +35,49 @@
             <span></span>
         </button>
         <nav class="nav-menu desktop-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="capabilities.html">Capabilities</a></li>
-                <li><a href="industries.html">Industries</a></li>
-                <li><a href="index.html#two">Company</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+			<ul>
+				<li class="has-submenu">
+					<a href="industries.html">Industries</a>
+					<ul class="sub-menu">
+						<li><a href="industries.html#consumer-electronics">Consumer Electronics & IoT Devices</a></li>
+						<li><a href="industries.html#security-surveillance">Security & Surveillance</a></li>
+						<li><a href="industries.html#energy-utilities">Energy & Utilities</a></li>
+						<li><a href="industries.html#industrial">Industrial</a></li>
+						<li><a href="industries.html#robotics">Robotics</a></li>
+						<li><a href="industries.html#aerospace-defense">Aerospace & Defense</a></li>
+					</ul>
+				</li>
+				<li class="has-submenu">
+					<a href="capabilities.html">Capabilities</a>
+					<ul class="sub-menu">
+						<li><a href="capabilities.html#edge-ai">Edge AI Solutions</a></li>
+						<li><a href="capabilities.html#product-design">Product Design & Engineering</a></li>
+						<li><a href="capabilities.html#embedded-system">Embedded System Design</a></li>
+						<li><a href="capabilities.html#fpga-design">FPGA Design</a></li>
+						<li><a href="capabilities.html#manufacturing">Manufacturing and Assembly</a></li>
+						<li><a href="capabilities.html#inventory">Managed Inventory and Logistics</a></li>
+						<li><a href="capabilities.html#quality-assurance">System Integration & Quality Assurance</a></li>
+					</ul>
+				</li>
+				<li class="has-submenu">
+					<a href="products.html">Products</a>
+					<ul class="sub-menu">
+						<li><a href="products.html#ipg">Intelligent Pipeline Generator</a></li>
+						<li><a href="products.html#mlops">Intelligent Edge MLops</a></li>
+					</ul>
+				</li>
+				<li><a href="index.html#two">Company</a></li>
+				<li><a href="#contact">Contact Us</a></li>
+			</ul>
+		</nav>
+		
     </header>
 
     <nav class="mobile-nav">
         <ul class="main-menu">
             <li><a href="index.html">Home</a></li>
             <li class="has-submenu">
-                <a href="capabilities.html">Capabilities</a>
+                <a>Capabilities</a>
                 <span class="submenu-arrow">&#9660;</span>
                 <ul class="sub-menu">
                     <li><a href="capabilities.html#edge-ai">Edge AI Solutions</a></li>
@@ -63,7 +90,7 @@
                 </ul>
             </li>
             <li class="has-submenu">
-                <a href="industries.html">Industries</a>
+                <a>Industries</a>
                 <span class="submenu-arrow">&#9660;</span>
                 <ul class="sub-menu">
                     <li><a href="industries.html#consumer-electronics">Consumer Electronics & IoT Devices</a></li>
@@ -215,8 +242,7 @@
 
 	<!-- Industries Section -->
 	<section id="industries" class="industries-section">
-		<h1 class="section-heading">Explore Our Industries</h1> <!-- Added new heading -->
-		<h1 class="section-title">Industries We Serve</h1>
+		<h1 class="section-heading">Industries We Serve</h1> <!-- Added new heading -->
 		<div class="industries-grid">
 			<div class="industry-card" data-industry="consumer-electronics">
 				<img src="images/Consumer electronics and Iot 2.webp" alt="Consumer Electronics & IoT"
@@ -322,6 +348,7 @@
 						<div class="partner-submit">
 							<button type="submit">Send Message</button>
 						</div>
+						<div id="form-response" style="color: #141b41; margin-top: 10px; text-align: center;"></div>
 					</form>
 				</div>
 			</div>
@@ -422,7 +449,7 @@
 					e.stopPropagation(); // avoid triggering collapse
 					const productId = exploreBtn.getAttribute("data-product");
 					if (productId) {
-						window.location.href = `products.html?product=${productId}`;
+						window.location.href = `products.html#${productId}`;
 					}
 				});
 			});
